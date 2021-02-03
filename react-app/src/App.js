@@ -11,6 +11,7 @@ import User from "./components/User";
 import Home from "./components/Home";
 
 import { authenticate } from "./services/auth";
+import Footer from "./components/Footer";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -56,6 +57,7 @@ function App() {
           <h1>My Home Page</h1>
         </ProtectedRoute>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
