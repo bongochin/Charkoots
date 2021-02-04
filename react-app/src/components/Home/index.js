@@ -3,7 +3,6 @@ import React from "react";
 function Home() {
   return (
     <div>
-      <h4>Here's how it works...</h4>
       <div className="homepage-images">
         <a className="homepage_images_main" href="/menus/curated">
           <img src="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" />
@@ -15,6 +14,7 @@ function Home() {
           <img src="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" />
         </a>
       </div>
+      <h4>Here's how it works...</h4>
       <p>Welcome to Charkoots!</p>
       <p>
         It's your perfect romantic weekend getaway, and you really want to make it special this time. Candles, check. Luther Vandross, check. You nailed it all but there's one problem; what about food and wine?

@@ -46,6 +46,11 @@ function Curated () {
         <p>"Characteristics" Component</p>
         <button>CUSTOMIZE</button>
       </div>
+      <div className="menus-curated_start-order">
+        <h4>Don't see what you like? Build your own!</h4>
+        <p>Build your own delicious board now!</p>
+        <button>START ORDER</button>
+      </div>
     </div>
   )
 }

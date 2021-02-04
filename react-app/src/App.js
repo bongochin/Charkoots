@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar";
 import UsersList from "./components/UserList";
 import User from "./components/User";
 import Home from "./components/Home";
+import Orders from "./components/Orders"
 import Menus from "./components/Menus"
 
 import { authenticate } from "./services/auth";
@@ -38,6 +39,9 @@ function App() {
       <Switch>
         <Route path="/" exact={true}>
           <Home/>
+        </Route>
+        <Route path="/orders" exact={true}>
+          <Orders/>
         </Route>
         <Route path="/menus" exact={true}>
           <Menus/>
