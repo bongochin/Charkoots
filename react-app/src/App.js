@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar";
 import UsersList from "./components/UserList";
 import User from "./components/User";
 import Home from "./components/Home";
+import Menus from "./components/Menus"
 
 import { authenticate } from "./services/auth";
 import Footer from "./components/Footer";
@@ -38,6 +39,9 @@ function App() {
         <Route path="/" exact={true}>
           <Home/>
         </Route>
+        <Route path="/menus" exact={true}>
+          <Menus/>
+        </Route>
         <Route path="/login" exact={true}>
           <LoginForm
             authenticated={authenticated}
@@ -52,9 +56,6 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/users/:userId" exact={true} authenticated={authenticated}>
           <User />
-        </ProtectedRoute>
-        <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
-          <h1>My Home Page</h1>
         </ProtectedRoute>
       </Switch>
       <Footer />

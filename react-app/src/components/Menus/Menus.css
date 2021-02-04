@@ -1,0 +1,10 @@
+.menus-board-items {
+  display: flex;
+  flex-direction: row;
+}
+
+.menus-curated-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
