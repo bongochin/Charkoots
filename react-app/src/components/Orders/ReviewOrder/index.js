@@ -52,7 +52,7 @@ function ReviewOrder () {
         <table>
           <tr>
             <th>Food & Beverage</th>
-            <td>props.boards.board_cost</th>
+            <td>props.boards.board_cost</td>
           </tr>
           <tr>
             <th>Delivery Charge</th>

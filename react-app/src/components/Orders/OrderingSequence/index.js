@@ -23,36 +23,60 @@ function OrderingSequence () {
         {/* SUBMIT button for last phase */}
       </div>
       <div className="ordering-sequence_item-selection-board">
-        <div className="selection-board_left">
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-        </div>
-        <div className="selection-board_center">
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-        </div>
-        <div className="selection-board_right">
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-          <input type="radio">props.board_items.item_type</input>
-        </div>
+        <form className="selection-board_left">
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+        </form>
+        <form className="selection-board_center">
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+        </form>
+        <form className="selection-board_right">
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+          <input type="radio" id="board_item" name="board_item" value="board_item"/>
+          <label for="board_item">props.board_items.item_name</label>
+        </form>
       </div>
     </div>
   )
