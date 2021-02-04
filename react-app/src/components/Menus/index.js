@@ -1,28 +1,111 @@
 import React, { useState } from 'react';
 import MenuNavBar from './MenuNavBar';
-import ViewAll from './MenusTab/ViewAll'
+import { tabToDisplay } from './MenuNavBar';
 import Curated from './MenusTab/Curated'
 import BoardItems from './MenusTab/BoardItems'
 import './Menus.css';
 
 
 function Menus() {
-  const [tabToDisplay, setTabToDisplay] = useState("board-items")
+  const [tabToDisplay, setTabToDisplay] = useState("")
 
-  function onClickHandler (e) {
-
-  }
-
-  if (tabToDisplay == "view-all") {
-    return <ViewAll />
-  } else if (tabToDisplay == "curated") {
-    return <Curated />
+  if (tabToDisplay == "curated") {
+    return (
+      <div>
+        <MenuNavBar state={tabToDisplay, setTabToDisplay}/>
+        <Curated />
+      </div>
+    )
   } else if (tabToDisplay == "board-items") {
-    return <BoardItems />
+    return (
+      <div>
+        <MenuNavBar />
+        <BoardItems />
+      </div>
+    )
   } else {
     return (
       <div className="menus-wrapper">
         <MenuNavBar />
+        <div className="menus-start-order">
+				<h4>Let's get you started!</h4>
+				<p>Build your own delicious board now!</p>
+				<button>START ORDER</button>
+			</div>
+			<h4>You can mix & match with so many options to choose!</h4>
+			<div className="menus-board-items">
+				{/* look at event cards and see how it renders. can this be shorter? */}
+				<div className="menus-board-items_card">
+					<p id="board-items-column_title">Meats</p>
+					<p>props.board_items.type == 'Meats'</p>
+					<button>INFO</button>
+				</div>
+				<div className="menus-board-items_card">
+					<p id="board-items-column_title">Cheeses</p>
+					<p>props.board_items.type == 'Cheeses'</p>
+					<button>INFO</button>
+				</div>
+				<div className="menus-board-items_card">
+					<p id="board-items-column_title">Crackers</p>
+					<p>props.board_items.type == 'Crackers'</p>
+					<button>INFO</button>
+				</div>
+				<div className="menus-board-items_card">
+					<p id="board-items-column_title">Fruits</p>
+					<p>props.board_items.type == 'Fruits'</p>
+					<button>INFO</button>
+				</div>
+				<div className="menus-board-items_card">
+					<p id="board-items-column_title">Nuts</p>
+					<p>props.board_items.type == 'Nuts'</p>
+					<button>INFO</button>
+				</div>
+				<div className="menus-board-items_card">
+					<p id="board-items-column_title">Spreads</p>
+					<p>props.board_items.type == 'Spreads'</p>
+					<button>INFO</button>
+				</div>
+			</div>
+			<h4>Or, select from our chef's tastefully curated boards!</h4>
+			<div className="menus-curated-items">
+				<div className="menus-curated_card">
+					<p>props.boards.board_name</p>
+					<img src="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" />
+					<p>props.boards.description</p>
+					<button>START ORDER</button>
+				</div>
+				<div className="menus-curated_card">
+					<p>props.boards.board_name</p>
+					<img src="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" />
+					<p>props.boards.description</p>
+					<button>START ORDER</button>
+				</div>
+				<div className="menus-curated_card">
+					<p>props.boards.board_name</p>
+					<img src="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" />
+					<p>props.boards.description</p>
+					<button>START ORDER</button>
+				</div>
+				<div className="menus-curated_card">
+					<p>props.boards.board_name</p>
+					<img src="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" />
+					<p>props.boards.description</p>
+					<button>START ORDER</button>
+				</div>
+				<div className="menus-curated_card">
+					<p>props.boards.board_name</p>
+					<img src="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" />
+					<p>props.boards.description</p>
+					<button>START ORDER</button>
+				</div>
+				<div className="menus-curated_card">
+					<p>props.boards.board_name</p>
+					<img src="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" />
+					<p>props.boards.description</p>
+					<button>START ORDER</button>
+				</div>
+			</div>
+
       </div>
     );
   }
