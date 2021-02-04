@@ -1,20 +1,34 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import MenuNavBar from './MenuNavBar';
+import { tabToDisplay } from './MenuNavBar';
+import Curated from './MenusTab/Curated'
+import BoardItems from './MenusTab/BoardItems'
 import './Menus.css';
+import {MenuNavBarContext} from '../../context/MenuNavBarContext'
+
 
 function Menus() {
-	return (
-		<div className="menus-wrapper">
-			<div className="menu-navbar">
-				<button>View All</button>
-				<button>Curated</button>
-				<button>Meats</button>
-				<button>Cheeses</button>
-				<button>Crackers</button>
-				<button>Fruits</button>
-				<button>Nuts</button>
-				<button>Spreads</button>
-			</div>
-			<div className="menus-start-order">
+  const {tabToDisplay} = useContext(MenuNavBarContext);
+
+  if (tabToDisplay == "curated") {
+    return (
+      <div>
+        <MenuNavBar />
+        <Curated />
+      </div>
+    )
+  } else if (tabToDisplay == "boardItems") {
+    return (
+      <div>
+        <MenuNavBar />
+        <BoardItems />
+      </div>
+    )
+  } else {
+    return (
+      <div className="menus-wrapper">
+        <MenuNavBar />
+        <div className="menus-start-order">
 				<h4>Let's get you started!</h4>
 				<p>Build your own delicious board now!</p>
 				<button>START ORDER</button>
@@ -92,8 +106,24 @@ function Menus() {
 					<button>START ORDER</button>
 				</div>
 			</div>
-		</div>
-	);
+
+      </div>
+    );
+  }
+
+  /*
+  current state of isActive is defaulted to "view-all".
+  onClick handler changes isActive state based on the name of the MenuNavBar button. Then,
+  the page renders respective MenusTab components ("view-all" for ViewAll.js, "curated" for Curated.js, "board-items" for BoardItems.js)
+
+  or,
+
+  you build out all separate components for all, and menus component will host bunch of if, else if statements to navigate.
+  think of how chris used
+  */
+
+
+
 }
 
 export default Menus;
