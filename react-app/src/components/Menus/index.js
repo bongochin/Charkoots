@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import MenuNavBar from './MenuNavBar';
 import { tabToDisplay } from './MenuNavBar';
 import Curated from './MenusTab/Curated'
 import BoardItems from './MenusTab/BoardItems'
 import './Menus.css';
+import {MenuNavBarContext} from '../../context/MenuNavBarContext'
 
 
 function Menus() {
-  const [tabToDisplay, setTabToDisplay] = useState("")
+  const {tabToDisplay} = useContext(MenuNavBarContext);
 
   if (tabToDisplay == "curated") {
     return (
       <div>
-        <MenuNavBar state={tabToDisplay, setTabToDisplay}/>
+        <MenuNavBar />
         <Curated />
       </div>
     )
-  } else if (tabToDisplay == "board-items") {
+  } else if (tabToDisplay == "boardItems") {
     return (
       <div>
         <MenuNavBar />
