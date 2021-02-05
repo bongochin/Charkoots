@@ -1,0 +1,23 @@
+.navbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: #8E0032;
+}
+
+.navbar-home_logo {
+  width: 30%;
+}
+
+.navbar-home_logo:hover {
+  opacity: 0.8;
+}
+
+.navbar-tabs {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  width: 500px;
+  font-size: 30px;
+}
