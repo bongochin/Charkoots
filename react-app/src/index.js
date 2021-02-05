@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import MenuNavBarProvider from './context/MenuNavBarContext';
 
+import 'fontsource-roboto'
+
 ReactDOM.render(
   <React.StrictMode>
     <MenuNavBarProvider>
