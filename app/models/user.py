@@ -11,7 +11,7 @@ class User(db.Model, UserMixin):
   first_name = db.Column(db.String(50), nullable = False)
   last_name = db.Column(db.String(50), nullable = False)
   address1 = db.Column(db.String(255), nullable = False)
-  address2 = db.Column(db.String(255), nullable = False)
+  address2 = db.Column(db.String(255))
   city = db.Column(db.String(50), nullable = False)
   state = db.Column(db.String(2), nullable = False)
   zipcode = db.Column(db.Integer(5), nullable = False)

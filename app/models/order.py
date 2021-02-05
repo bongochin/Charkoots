@@ -1,5 +1,4 @@
 from .db import db
-from .user import User
 
 class Order(db.Model):
 
