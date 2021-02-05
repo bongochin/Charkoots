@@ -6,9 +6,18 @@ class User(db.Model, UserMixin):
   __tablename__ = 'users'
 
   id = db.Column(db.Integer, primary_key = True)
-  username = db.Column(db.String(40), nullable = False, unique = True)
   email = db.Column(db.String(255), nullable = False, unique = True)
   hashed_password = db.Column(db.String(255), nullable = False)
+  first_name = db.Column(db.String(50), nullable = False)
+  last_name = db.Column(db.String(50), nullable = False)
+  address1 = db.Column(db.String(255), nullable = False)
+  address2 = db.Column(db.String(255), nullable = False)
+  city = db.Column(db.String(50), nullable = False)
+  state = db.Column(db.String(2), nullable = False)
+  zipcode = db.Column(db.Integer(5), nullable = False)
+
+  # User has many Orders
+  orders = db.relationship('Order', secondary='users_orders', back_populates="user")
 
 
   @property
