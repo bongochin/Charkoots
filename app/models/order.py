@@ -11,7 +11,7 @@ class Order(db.Model):
   shipping_address2 = db.Column(db.String(255), nullable = False)
   shipping_city = db.Column(db.String(50), nullable = False)
   shipping_state = db.Column(db.String(2), nullable = False)
-  shipping_zipcode = db.Column(db.Integer(5), nullable = False)
+  shipping_zipcode = db.Column(db.Integer, nullable = False)
 
   # Order has a single board
   board = db.relationship('Board', back_populates='orders')

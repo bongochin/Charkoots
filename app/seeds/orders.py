@@ -1,4 +1,3 @@
-from werkzeug.security import generate_password_hash
 from app.models import db, Order
 
 # Adds a demo user, you can add other users here if you want
