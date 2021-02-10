@@ -275,6 +275,6 @@ def seed_board_items():
     db.session.commit()
 
     # =====================================================
-def undo_users():
-    db.session.execute('TRUNCATE users CASCADE;')
+def undo_board_items():
+    db.session.execute('TRUNCATE board_items CASCADE;')
     db.session.commit()

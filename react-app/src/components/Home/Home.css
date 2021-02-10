@@ -1,0 +1,31 @@
+.homepage-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 800px;
+}
+
+.homepage-paragraph {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  justify-content: center;
+}
+
+.homepage-paragraph > h4 {
+  color: #CC0202;
+  font-size: 20px;
+}
+
+.homepage-wrapper > button {
+  color: #CC0202;
+  background-color: white;
+  border: 3px solid #CC0202;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
