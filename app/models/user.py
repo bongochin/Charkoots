@@ -6,7 +6,7 @@ class User(db.Model, UserMixin):
   __tablename__ = 'users'
 
   id = db.Column(db.Integer, primary_key = True)
-  username = db.Column(db.String, nullable = False, unique = True)
+  username = db.Column(db.String(40), nullable = False)
   email = db.Column(db.String(255), nullable = False, unique = True)
   hashed_password = db.Column(db.String(255), nullable = False)
   first_name = db.Column(db.String(50), nullable = False)
@@ -18,7 +18,7 @@ class User(db.Model, UserMixin):
   zipcode = db.Column(db.Integer, nullable = False)
 
   # User has many Orders
-  # orders = db.relationship('Order', secondary='users_orders', back_populates="user")
+  order = db.relationship('Order', secondary='users_orders', back_populates="user")
 
 
   @property

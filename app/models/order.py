@@ -13,6 +13,9 @@ class Order(db.Model):
   shipping_state = db.Column(db.String(2), nullable = False)
   shipping_zipcode = db.Column(db.Integer, nullable = False)
 
+  # Order has a single user
+  user = db.relationship('User', secondary='users_orders', back_populates="order")
+
   # Order has a single board
   board = db.relationship('Board', back_populates='orders')
 

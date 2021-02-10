@@ -1,6 +1,6 @@
 from .db import db
 
-class User_Order(db.Model):
+class Users_Order(db.Model):
 
   __tablename__ = 'users_orders'
 

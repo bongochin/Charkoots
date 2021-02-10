@@ -19,7 +19,7 @@ class Wine(db.Model):
 
 
   # Board Item is related to a board
-  board = db.relationship('board', back_populated='board_items')
+  board = db.relationship('board', back_populates='board_items')
 
   def to_dict(self):
     return {
