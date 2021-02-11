@@ -827,5 +827,5 @@ def seed_board_items():
     # =====================================================
 
 def undo_board_items():
-    db.session.execute('TRUNCATE board_items CASCADE;')
+    db.session.execute('TRUNCATE board_items RESTART IDENTITY CASCADE;')
     db.session.commit()

@@ -39,5 +39,5 @@ def seed_users():
     db.session.commit()
 
 def undo_users():
-    db.session.execute('TRUNCATE users CASCADE;')
+    db.session.execute('TRUNCATE users RESTART IDENTITY CASCADE;')
     db.session.commit()
