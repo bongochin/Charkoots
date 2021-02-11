@@ -43,4 +43,19 @@
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  outline: 0;
+}
+
+.homepage-wrapper > button:hover {
+  color: #FEC8A9;
+  background-color: #CC0202;
+  border: 3px solid #FEC8A9;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: 0;
 }

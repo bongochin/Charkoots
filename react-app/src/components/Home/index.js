@@ -1,7 +1,10 @@
 import React from "react";
+import {useHistory} from 'react-router-dom';
 import './Home.css';
 
 function Home() {
+  const history = useHistory();
+
   return (
     <div className="homepage-wrapper">
       <div className="homepage-images">
@@ -29,7 +32,7 @@ function Home() {
         </p>
         <p>Click on the button below to start building your very own Charkoot board!</p>
       </div>
-      <button>START YOUR ORDER</button>
+      <button onClick={() => history.push('/orders')}>START YOUR ORDER</button>
     </div>
   );
 }
