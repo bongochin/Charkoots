@@ -1,8 +1,8 @@
-"""empty message
+"""create-tables
 
-Revision ID: 6c992c1dc9de
-Revises: 4833fe46fd22
-Create Date: 2021-02-09 14:26:45.617430
+Revision ID: f5c6e832d7d4
+Revises: 
+Create Date: 2021-02-11 15:41:57.445258
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '6c992c1dc9de'
-down_revision = '4833fe46fd22'
+revision = 'f5c6e832d7d4'
+down_revision = None
 branch_labels = None
 depends_on = None
 
@@ -24,52 +24,49 @@ def upgrade():
     sa.Column('item_name', sa.String(length=50), nullable=False),
     sa.Column('item_image', sa.String(), nullable=True),
     sa.Column('item_description', sa.Text(), nullable=False),
-    sa.Column('boldness', sa.Integer(), nullable=True),
-    sa.Column('sharpness', sa.Integer(), nullable=True),
-    sa.Column('saltiness', sa.Integer(), nullable=True),
-    sa.Column('spiciness', sa.Integer(), nullable=True),
-    sa.Column('sweetness', sa.Integer(), nullable=True),
+    sa.Column('boldness', sa.Float(), nullable=True),
+    sa.Column('sharpness', sa.Float(), nullable=True),
+    sa.Column('saltiness', sa.Float(), nullable=True),
+    sa.Column('spiciness', sa.Float(), nullable=True),
+    sa.Column('sweetness', sa.Float(), nullable=True),
     sa.PrimaryKeyConstraint('id')
+    )
+    op.create_table('users',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('username', sa.String(length=40), nullable=False),
+    sa.Column('email', sa.String(length=255), nullable=False),
+    sa.Column('hashed_password', sa.String(length=255), nullable=False),
+    sa.Column('first_name', sa.String(length=50), nullable=False),
+    sa.Column('last_name', sa.String(length=50), nullable=False),
+    sa.Column('address1', sa.String(length=255), nullable=False),
+    sa.Column('address2', sa.String(length=255), nullable=True),
+    sa.Column('city', sa.String(length=50), nullable=False),
+    sa.Column('state', sa.String(length=2), nullable=False),
+    sa.Column('zipcode', sa.Integer(), nullable=False),
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('email')
     )
     op.create_table('wines',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('wine_type', sa.String(length=50), nullable=False),
-    sa.Column('wine_name', sa.String(length=50), nullable=False),
+    sa.Column('wine_name', sa.String(length=200), nullable=False),
     sa.Column('wine_image', sa.String(), nullable=True),
     sa.Column('wine_description', sa.Text(), nullable=False),
-    sa.Column('wine_cost', sa.Integer(), nullable=False),
-    sa.Column('boldness', sa.Integer(), nullable=True),
-    sa.Column('sharpness', sa.Integer(), nullable=True),
-    sa.Column('saltiness', sa.Integer(), nullable=True),
-    sa.Column('spiciness', sa.Integer(), nullable=True),
-    sa.Column('sweetness', sa.Integer(), nullable=True),
+    sa.Column('wine_cost', sa.Float(), nullable=False),
+    sa.Column('boldness', sa.Float(), nullable=True),
+    sa.Column('sharpness', sa.Float(), nullable=True),
+    sa.Column('saltiness', sa.Float(), nullable=True),
+    sa.Column('spiciness', sa.Float(), nullable=True),
+    sa.Column('sweetness', sa.Float(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('boards',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('board_name', sa.String(length=50), nullable=False),
     sa.Column('board_description', sa.Text(), nullable=False),
-    sa.Column('board_cost', sa.Integer(), nullable=False),
+    sa.Column('board_cost', sa.Float(), nullable=False),
     sa.Column('meat1', sa.Integer(), nullable=False),
-    sa.Column('meat2', sa.Integer(), nullable=False),
-    sa.Column('meat3', sa.Integer(), nullable=False),
-    sa.Column('cheese1', sa.Integer(), nullable=False),
-    sa.Column('cheese2', sa.Integer(), nullable=False),
-    sa.Column('cheese3', sa.Integer(), nullable=False),
-    sa.Column('cracker', sa.Integer(), nullable=False),
-    sa.Column('fruit', sa.Integer(), nullable=False),
-    sa.Column('nut', sa.Integer(), nullable=False),
-    sa.Column('spread', sa.Integer(), nullable=False),
-    sa.ForeignKeyConstraint(['cheese1'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['cheese2'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['cheese3'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['cracker'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['fruit'], ['board_items.id'], ),
     sa.ForeignKeyConstraint(['meat1'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['meat2'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['meat3'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['nut'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['spread'], ['board_items.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('orders',
@@ -93,16 +90,15 @@ def upgrade():
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
-    op.drop_constraint('users_username_key', 'users', type_='unique')
     # ### end Alembic commands ###
 
 
 def downgrade():
     # ### commands auto generated by Alembic - please adjust! ###
-    op.create_unique_constraint('users_username_key', 'users', ['username'])
     op.drop_table('users_orders')
     op.drop_table('orders')
     op.drop_table('boards')
     op.drop_table('wines')
+    op.drop_table('users')
     op.drop_table('board_items')
     # ### end Alembic commands ###
