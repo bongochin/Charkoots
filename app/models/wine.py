@@ -10,16 +10,16 @@ class Wine(db.Model):
   wine_name = db.Column(db.String(50), nullable=False)
   wine_image = db.Column(db.String, default="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg")
   wine_description = db.Column(db.Text, nullable=False)
-  wine_cost = db.Column(db.Integer, nullable=False)
-  boldness = db.Column(db.Integer, default=0)
-  sharpness = db.Column(db.Integer, default=0)
-  saltiness = db.Column(db.Integer, default=0)
-  spiciness = db.Column(db.Integer, default=0)
-  sweetness = db.Column(db.Integer, default=0)
+  wine_cost = db.Column(db.Float, nullable=False)
+  boldness = db.Column(db.Float, default=0)
+  sharpness = db.Column(db.Float, default=0)
+  saltiness = db.Column(db.Float, default=0)
+  spiciness = db.Column(db.Float, default=0)
+  sweetness = db.Column(db.Float, default=0)
 
 
-  # Board Item is related to a board
-  board = db.relationship('Board', back_populates='board_items')
+  # Wine is related to a single order
+  order = db.relationship('Order', back_populates='wine')
 
   def to_dict(self):
     return {

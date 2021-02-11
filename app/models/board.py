@@ -7,7 +7,7 @@ class Board(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   board_name = db.Column(db.String(50), nullable=False)
   board_description = db.Column(db.Text, nullable=False)
-  board_cost = db.Column(db.Integer, nullable=False)
+  board_cost = db.Column(db.Float, nullable=False)
   meat1 = db.Column(db.Integer, db.ForeignKey('board_items.id'), nullable=False)
   meat2 = db.Column(db.Integer, db.ForeignKey('board_items.id'), nullable=False)
   meat3 = db.Column(db.Integer, db.ForeignKey('board_items.id'), nullable=False)
@@ -24,7 +24,7 @@ class Board(db.Model):
   order = db.relationship('Order', back_populates='board')
 
   # Board has many Board_Items
-  board_item = db.relationship('Board_Item', back_populates='board')
+  board_items = db.relationship('Board_Item', back_populates='board')
 
   def to_dict(self):
     return {

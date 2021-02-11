@@ -9,13 +9,13 @@ def seed_boards():
         meat1=1,
         meat2=2,
         meat3=3,
-        cheese1=4,
-        cheese2=5,
-        cheese3=6,
-        cracker=7,
-        fruit=8,
-        nut=9,
-        spread=10
+        cheese1=9,
+        cheese2=10,
+        cheese3=11,
+        cracker=17,
+        fruit=25,
+        nut=33,
+        spread=41
     )
 
     db.session.add(board1)

@@ -9,15 +9,15 @@ class Board_Item(db.Model):
   item_name = db.Column(db.String(50), nullable=False)
   item_image = db.Column(db.String, default="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg")
   item_description = db.Column(db.Text, nullable=False)
-  boldness = db.Column(db.Integer, default=0)
-  sharpness = db.Column(db.Integer, default=0)
-  saltiness = db.Column(db.Integer, default=0)
-  spiciness = db.Column(db.Integer, default=0)
-  sweetness = db.Column(db.Integer, default=0)
+  boldness = db.Column(db.Float, default=0)
+  sharpness = db.Column(db.Float, default=0)
+  saltiness = db.Column(db.Float, default=0)
+  spiciness = db.Column(db.Float, default=0)
+  sweetness = db.Column(db.Float, default=0)
 
 
   # Board Item is related to a board
-  board = db.relationship('Board', back_populates='board_item')
+  board = db.relationship('Board', back_populates='board_items')
 
   def to_dict(self):
     return {

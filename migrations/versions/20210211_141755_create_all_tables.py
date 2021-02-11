@@ -1,8 +1,8 @@
-"""create-tables
+"""create-all-tables
 
-Revision ID: 7e3437543aaa
+Revision ID: 6cb3acd5666d
 Revises: 
-Create Date: 2021-02-11 13:43:42.664300
+Create Date: 2021-02-11 14:17:55.550283
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '7e3437543aaa'
+revision = '6cb3acd5666d'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -24,11 +24,11 @@ def upgrade():
     sa.Column('item_name', sa.String(length=50), nullable=False),
     sa.Column('item_image', sa.String(), nullable=True),
     sa.Column('item_description', sa.Text(), nullable=False),
-    sa.Column('boldness', sa.Integer(), nullable=True),
-    sa.Column('sharpness', sa.Integer(), nullable=True),
-    sa.Column('saltiness', sa.Integer(), nullable=True),
-    sa.Column('spiciness', sa.Integer(), nullable=True),
-    sa.Column('sweetness', sa.Integer(), nullable=True),
+    sa.Column('boldness', sa.Float(), nullable=True),
+    sa.Column('sharpness', sa.Float(), nullable=True),
+    sa.Column('saltiness', sa.Float(), nullable=True),
+    sa.Column('spiciness', sa.Float(), nullable=True),
+    sa.Column('sweetness', sa.Float(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('users',
@@ -52,39 +52,21 @@ def upgrade():
     sa.Column('wine_name', sa.String(length=50), nullable=False),
     sa.Column('wine_image', sa.String(), nullable=True),
     sa.Column('wine_description', sa.Text(), nullable=False),
-    sa.Column('wine_cost', sa.Integer(), nullable=False),
-    sa.Column('boldness', sa.Integer(), nullable=True),
-    sa.Column('sharpness', sa.Integer(), nullable=True),
-    sa.Column('saltiness', sa.Integer(), nullable=True),
-    sa.Column('spiciness', sa.Integer(), nullable=True),
-    sa.Column('sweetness', sa.Integer(), nullable=True),
+    sa.Column('wine_cost', sa.Float(), nullable=False),
+    sa.Column('boldness', sa.Float(), nullable=True),
+    sa.Column('sharpness', sa.Float(), nullable=True),
+    sa.Column('saltiness', sa.Float(), nullable=True),
+    sa.Column('spiciness', sa.Float(), nullable=True),
+    sa.Column('sweetness', sa.Float(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('boards',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('board_name', sa.String(length=50), nullable=False),
     sa.Column('board_description', sa.Text(), nullable=False),
-    sa.Column('board_cost', sa.Integer(), nullable=False),
+    sa.Column('board_cost', sa.Float(), nullable=False),
     sa.Column('meat1', sa.Integer(), nullable=False),
-    sa.Column('meat2', sa.Integer(), nullable=False),
-    sa.Column('meat3', sa.Integer(), nullable=False),
-    sa.Column('cheese1', sa.Integer(), nullable=False),
-    sa.Column('cheese2', sa.Integer(), nullable=False),
-    sa.Column('cheese3', sa.Integer(), nullable=False),
-    sa.Column('cracker', sa.Integer(), nullable=False),
-    sa.Column('fruit', sa.Integer(), nullable=False),
-    sa.Column('nut', sa.Integer(), nullable=False),
-    sa.Column('spread', sa.Integer(), nullable=False),
-    sa.ForeignKeyConstraint(['cheese1'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['cheese2'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['cheese3'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['cracker'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['fruit'], ['board_items.id'], ),
     sa.ForeignKeyConstraint(['meat1'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['meat2'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['meat3'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['nut'], ['board_items.id'], ),
-    sa.ForeignKeyConstraint(['spread'], ['board_items.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('orders',
