@@ -17,10 +17,13 @@ function Home() {
       </div>
       <div className="homepage-paragraph">
         <h4>Here's how it works...</h4>
-        <p>Welcome to Charkoots!</p>
+        <p id="subheading">Welcome to Charkoots!</p>
         <p>
           It's your perfect romantic weekend getaway, and you really want to make it special this time. Candles, check. Luther Vandross, check. You nailed it all but there's one problem; what about food and wine?
-          Let us take care of that for you. Charkoots is a place where you can create and customize a delicious charcuterie board with our finest selection of cured meats,
+          Let us take care of that for you.
+        </p>
+        <p>
+          Charkoots is a place where you can create and customize a delicious charcuterie board with our finest selection of cured meats,
           artisanal cheeses, crackers and more to keep your cravings satisfied. Not only that, we'll take a deeper dive into what you have created, and pair you with the PERFECT wine to complement the experience.
           Too good to be true? I know, and you're welcome!
         </p>
