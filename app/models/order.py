@@ -17,10 +17,10 @@ class Order(db.Model):
   user = db.relationship('User', secondary='users_orders', back_populates="order")
 
   # Order has a single board
-  board = db.relationship('Board', back_populates='orders')
+  board = db.relationship('Board', back_populates='order')
 
   # Order has a single wine
-  wine = db.relationship('Wine', back_populates='orders')
+  wine = db.relationship('Wine', back_populates='order')
 
   def to_dict(self):
     return {

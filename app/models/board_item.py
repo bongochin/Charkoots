@@ -17,7 +17,7 @@ class Board_Item(db.Model):
 
 
   # Board Item is related to a board
-  board = db.relationship('Board', back_populates='board_items')
+  board = db.relationship('Board', back_populates='board_item')
 
   def to_dict(self):
     return {
