@@ -7,7 +7,7 @@ class Wine(db.Model):
 
   id = db.Column(db.Integer, primary_key=True)
   wine_type = db.Column(db.String(50), nullable=False)
-  wine_name = db.Column(db.String(50), nullable=False)
+  wine_name = db.Column(db.String(200), nullable=False)
   wine_image = db.Column(db.String, default="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg")
   wine_description = db.Column(db.Text, nullable=False)
   wine_cost = db.Column(db.Float, nullable=False)

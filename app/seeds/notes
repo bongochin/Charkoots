@@ -105,7 +105,7 @@ Seeder Data Brainstorming
     5. Malbec (Fruit:4, Body:5, Tannin:3, Acidity:4)
       name: El Enemigo Malbec 2017
       image: https://images.vivino.com/thumbs/S0m-9WKZRfKqjuvZbpy8Vg_pb_x600.png
-      description: Chocolate > Plum, Leather
+      description: Chocolate > Plum > Leather
       price: 21.99
 
     6. Zinfandel (Fruit:5, Body:5, Tannin:3, Acidity:2)
@@ -146,7 +146,7 @@ Seeder Data Brainstorming
       cost: 30.99
 
     4. Sauvignon Blanc (Fruit:5, Body:2, Sweetness:1, Acidity:5)
-      name: Merry Edwards
+      name: Merry Edwards Russian River Valley 2018
       image: https://images.vivino.com/thumbs/ifi5g5CHS7qXkrwfl5vgPA_pb_x600.png
       description: Peach > Citrus > Butter
       cost: 34.99
