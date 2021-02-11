@@ -3,7 +3,7 @@ from app.models import db, Order
 # Adds a demo user, you can add other users here if you want
 def seed_orders():
 
-    demo_order1 = Order(
+    order1 = Order(
         board_id=1,
         wine_id=1,
         shipping_address1 = '1600 Pennsylvania Avenue',
@@ -13,12 +13,12 @@ def seed_orders():
         shipping_zipcode = '20500'
     )
 
-    db.session.add(demo_order1)
+    db.session.add(order1)
     db.session.commit()
 
     # =====================================================
 
-    demo_order2 = Order(
+    order2 = Order(
         board_id=2,
         wine_id=2,
         shipping_address1 = '1600 Pennsylvania Avenue',
@@ -28,12 +28,12 @@ def seed_orders():
         shipping_zipcode = '20500'
     )
 
-    db.session.add(demo_order2)
+    db.session.add(order2)
     db.session.commit()
 
     # =====================================================
 
-    demo_order3 = Order(
+    order3 = Order(
         board_id=1,
         wine_id=2,
         shipping_address1 = '1600 Pennsylvania Avenue',
@@ -43,9 +43,9 @@ def seed_orders():
         shipping_zipcode = '20500'
     )
 
-    db.session.add(demo_order3)
+    db.session.add(order3)
     db.session.commit()
 
-def undo_users():
+def undo_orders():
     db.session.execute('TRUNCATE orders RESTART IDENTITY CASCADE;')
     db.session.commit()
