@@ -1,5 +1,28 @@
 .footer {
-  text-align: right;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   background-color: #8E0032;
-  color: white;
+  height: auto;
+}
+
+.footer_name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #FEC8A9;
+  font-size: 20px;
+  font-style: italic;
+  margin: 10px;
+}
+
+.footer_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer_icons > a {
+  color: #FEC8A9;
+  padding: 5px;
 }
