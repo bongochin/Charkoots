@@ -2,7 +2,7 @@ from flask import Blueprint, jsonify
 from flask_login import login_required
 from app.models import User, Users_Order
 
-user_routes = Blueprint('users', __name__)
+user_routes = Blueprint('boards', __name__)
 
 # Retrieve All Users
 @user_routes.route('/')

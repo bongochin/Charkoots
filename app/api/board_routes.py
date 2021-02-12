@@ -1,27 +1,28 @@
 from flask import Blueprint, jsonify, request
 from flask_login import login_required
 from app.models import db, Board, Board_Item
+from app.forms.board_form import BoardForm
 
 board_routes = Blueprint('boards', __name__)
 
 ## Boards =============================================
 
 # Retrieve All Boards
-@board_routes('/')
+@board_routes.route('/')
 # @login_required
 def boards():
   boards = Board.query.all()
   return jsonify([board.to_dict() for board in boards])
 
 # Retrieve Single Board
-@board_routes('/<int:id>')
+@board_routes.route('/<int:id>')
 # @login_required
 def board(id):
   board = Board.query.get(id)
   return board.to_dict()
 
 # Create a Board
-@board_routes('/', methods=["POST"])
+@board_routes.route('/', methods=["POST"])
 # @login_required
 def post_board():
   form = BoardForm() # need to build a form
@@ -35,7 +36,7 @@ def post_board():
   return {"errors": "Error occured"}
 
 # Edit a Board
-@board_routes('/<int:id>', methods=["PUT"])
+@board_routes.route('/<int:id>', methods=["PUT"])
 # @login_required
 def put_board(id):
   board = Board.query.get(id)
