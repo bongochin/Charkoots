@@ -5,6 +5,9 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Roboto";
+  /* font-family: 'Benne', serif; */
+  font-family: 'Merriweather', serif;
+  /* font-family: 'Roboto', sans-serif; */
   min-height: 100vh;
+  color: #490404
 }
