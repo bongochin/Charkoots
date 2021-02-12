@@ -1,6 +1,6 @@
 {
-    "python.pythonPath": "/Users/danchin/.pyenv/shims/python",
+    "python.pythonPath": "/Users/danchin/OneDrive/Bootcamp/Projects/Charkoots/.venv/bin/python3.8",
     "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
+    "python.linting.enabled": false,
     "python.linting.pycodestyleEnabled": false
 }
