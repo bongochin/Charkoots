@@ -11,18 +11,18 @@ board_routes = Blueprint('boards', __name__)
 @board_routes.route('/')
 # @login_required
 def boards():
-  boards = Board.query.all()
-  return jsonify([board.to_dict() for board in boards])
+  get_boards = Board.query.all()
+  return jsonify([board.to_dict() for board in get_boards])
 
 # Retrieve Single Board
 @board_routes.route('/<int:id>')
 # @login_required
 def board(id):
-  board = Board.query.get(id)
-  return board.to_dict()
+  get_board = Board.query.get(id)
+  return get_board.to_dict()
 
 # Create a Board
-@board_routes.route('/', methods=["POST"])
+@board_routes.route('/new', methods=["POST"])
 # @login_required
 def post_board():
   form = BoardForm() # need to build a form
@@ -35,47 +35,47 @@ def post_board():
     return new_board.to_dict()
   return {"errors": "Error occured"}
 
-# Edit a Board
-@board_routes.route('/<int:id>', methods=["PUT"])
-# @login_required
-def put_board(id):
-  board = Board.query.get(id)
+# # Edit a Board
+# @board_routes.route('/<int:id>', methods=["PUT"])
+# # @login_required
+# def put_board(id):
+#   put_board = Board.query.get(id)
 
-  if "board_name" in request.json:
-    board.board_name = request.json["board_name"]
-  if "board_description" in request.json:
-    board.board_description = request.json["board_description"]
-  if "board_cost" in request.json:
-    board.board_cost = request.json["board_cost"]
-  if "meat1" in request.json:
-    board.meat1 = request.json["meat1"]
-  if "meat2" in request.json:
-    board.meat2 = request.json["meat2"]
-  if "meat3" in request.json:
-    board.meat3 = request.json["meat3"]
-  if "cheese1" in request.json:
-    board.cheese1 = request.json["cheese1"]
-  if "cheese2" in request.json:
-    board.cheese2 = request.json["cheese2"]
-  if "cheese3" in request.json:
-    board.cheese3 = request.json["cheese3"]
-  if "cracker" in request.json:
-    board.cracker = request.json["cracker"]
-  if "fruit" in request.json:
-    board.fruit = request.json["fruit"]
-  if "nut" in request.json:
-    board.nut = request.json["nut"]
-  if "spread" in request.json:
-    board.spread = request.json["spread"]
-  db.session.commit()
+#   if "board_name" in request.json:
+#     put_board.board_name = request.json["board_name"]
+#   if "board_description" in request.json:
+#     put_board.board_description = request.json["board_description"]
+#   if "board_cost" in request.json:
+#     put_board.board_cost = request.json["board_cost"]
+#   if "meat1" in request.json:
+#     put_board.meat1 = request.json["meat1"]
+#   if "meat2" in request.json:
+#     put_board.meat2 = request.json["meat2"]
+#   if "meat3" in request.json:
+#     put_board.meat3 = request.json["meat3"]
+#   if "cheese1" in request.json:
+#     put_board.cheese1 = request.json["cheese1"]
+#   if "cheese2" in request.json:
+#     put_board.cheese2 = request.json["cheese2"]
+#   if "cheese3" in request.json:
+#     put_board.cheese3 = request.json["cheese3"]
+#   if "cracker" in request.json:
+#     put_board.cracker = request.json["cracker"]
+#   if "fruit" in request.json:
+#     put_board.fruit = request.json["fruit"]
+#   if "nut" in request.json:
+#     put_board.nut = request.json["nut"]
+#   if "spread" in request.json:
+#     put_board.spread = request.json["spread"]
+#   db.session.commit()
 
-  return {"message": "success"}
+#   return {"message": "success"}
 
-  # Delete a Board
-  @board_routes.route('/<int:id>', methods=["DELETE"])
-  # @login_required
-  def delete_board(id):
-    board = Board.query.get(id)
-    db.session.delete(board)
-    db.session.commit()
-    return {"message": "success"}
+#   # Delete a Board
+#   @board_routes.route('/<int:id>', methods=["DELETE"])
+#   # @login_required
+#   def delete_board(id):
+#     delete_board = Board.query.get(id)
+#     db.session.delete(delete_board)
+#     db.session.commit()
+#     return {"message": "success"}

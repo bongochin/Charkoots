@@ -1,5 +1,5 @@
 .homepage-wrapper {
-  margin-top: 100px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,23 +8,30 @@
 .homepage-paragraph {
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: auto;
+  max-width: 50%;
   justify-content: center;
+  /* padding-right: 25%;
+  padding-left: 25%; */
+}
+
+.homepage-images {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 #subheading {
-  color: #FEC8A9;
+  color: #FAB4A0;
   font-size: 25px;
-
 }
 
 .homepage-paragraph > h4 {
   color: #CC0202;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 100;
   font-style: italic;
   padding-top: 50px;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
 }
 
 .homepage-paragraph > p {
@@ -33,9 +40,9 @@
 }
 
 .homepage-wrapper > button {
-  color: #CC0202;
+  color: #FAB4A0;
   background-color: white;
-  border: 3px solid #CC0202;
+  border: 4px solid #FAB4A0;
   border-radius: 10px;
   font-size: 20px;
   margin: 50px;
@@ -47,9 +54,10 @@
 }
 
 .homepage-wrapper > button:hover {
-  color: #FEC8A9;
-  background-color: #CC0202;
-  border: 3px solid #FEC8A9;
+  color: #CC0202;
+  background-color: white;
+  border: 5px solid #CC0202;
+  opacity: 0.8;
   border-radius: 10px;
   font-size: 20px;
   margin: 50px;
