@@ -11,16 +11,19 @@ const images = [
 		url: 'https://cdn.shopify.com/s/files/1/0308/1777/9849/products/bayleaf_1152x1152.jpg?v=1602211437',
 		title: 'Start Your Order',
 		width: '400px',
+		direct: '/orders'
 	},
 	{
 		url: 'https://cdn.shopify.com/s/files/1/0308/1777/9849/products/865A5656_1152x1152.jpg?v=1602208390',
 		title: 'Browse our Selection',
 		width: '400px',
+		direct: '/menus'
 	},
 	{
 		url: 'https://cdn.shopify.com/s/files/1/0308/1777/9849/products/865A5099_8fc53134-1e9f-463e-ad31-492dbf9b1305_1152x1152.jpg?v=1601253491',
 		title: 'Get Inspired',
 		width: '400px',
+		direct: '/menus'
 	},
 ];
 
@@ -109,6 +112,7 @@ export default function Home() {
           style={{
             width: image.width,
           }}
+					onClick={() => history.push(image.direct)}
         >
           <span
             className={classes.imageSrc}
