@@ -20,6 +20,7 @@ import Menus from './components/Menus';
 
 import { authenticate } from './services/auth';
 import Footer from './components/Footer';
+import OrderForm from './components/Orders/OrderForm';
 
 function App() {
 	const [authenticated, setAuthenticated] = useState(false);
@@ -50,7 +51,8 @@ function App() {
 					<Orders />
 				</Route>
 				<Route path="/orders/new" exact={true}>
-					<OrderingSequence authenticated={authenticated} setAuthenticated={setAuthenticated}/>
+					{/* <OrderingSequence authenticated={authenticated} setAuthenticated={setAuthenticated}/> */}
+					<OrderForm authenticated={authenticated} setAuthenticated={setAuthenticated}/>
 				</Route>
 				<Route path="/orders/new/wine" exact={true}>
 					<PerfectWine authenticated={authenticated} setAuthenticated={setAuthenticated}/>

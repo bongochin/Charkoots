@@ -2,6 +2,9 @@
   margin-bottom: 150px;
   display: flex;
   flex-direction: column;
+  margin-left: 20%;
+  margin-right: 20%;
+  /* align-items: center; */
 }
 
 .orders-wrapper > h4 {
@@ -11,9 +14,16 @@
   font-weight: 1000;
 }
 
+.orders_images {
+  background-color: red;
+  display: flex;
+  align-items: center;
+}
+
 #orders_cards {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 60%;
+  /* max-width: 60%; */
 }

@@ -11,6 +11,7 @@
   width: auto;
   max-width: 50%;
   justify-content: center;
+  font-family: Merryweather;
   /* padding-right: 25%;
   padding-left: 25%; */
 }
@@ -28,13 +29,13 @@
 .homepage-paragraph > h4 {
   color: #CC0202;
   font-size: 40px;
-  font-weight: 100;
   font-style: italic;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .homepage-paragraph > p {
+  font-size: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
