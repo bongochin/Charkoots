@@ -1,5 +1,13 @@
 import React, { Component } from 'react'
 import OrderingSequence from '../OrderingSequence';
+
+import Meats from '../OrderingSequence/Meats'
+import Cheeses from '../OrderingSequence/Cheeses'
+import Crackers from '../OrderingSequence/Crackers'
+import Fruits from '../OrderingSequence/Fruits'
+import Nuts from '../OrderingSequence/Nuts'
+import Spreads from '../OrderingSequence/Spreads'
+
 import PerfectWine from '../PerfectWine';
 import ReviewOrder from '../ReviewOrder';
 import ThankYou from '../ThankYou';
@@ -45,7 +53,7 @@ export default class OrderForm extends Component {
         )
       case 2:
         return (
-          <PerfectWine
+          <Meats
             prevStep={this.prevStep}
             nextStep={this.nextStep}
             handleChange={this.handleChange}
@@ -54,7 +62,7 @@ export default class OrderForm extends Component {
         )
       case 3:
         return (
-          <ReviewOrder
+          <Cheeses
             prevStep={this.prevStep}
             nextStep={this.nextStep}
             handleChange={this.handleChange}
@@ -62,6 +70,60 @@ export default class OrderForm extends Component {
           />
         )
       case 4:
+        return (
+          <Crackers
+            prevStep={this.prevStep}
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        )
+      case 5:
+        return (
+          <Fruits
+            prevStep={this.prevStep}
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        )
+      case 6:
+        return (
+          <Nuts
+            prevStep={this.prevStep}
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        )
+      case 7:
+        return (
+          <Spreads
+            prevStep={this.prevStep}
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        )
+      case 8:
+        return (
+          <PerfectWine
+            prevStep={this.prevStep}
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        )
+      case 9:
+        return (
+          <ReviewOrder
+            prevStep={this.prevStep}
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        )
+      case 10:
         return (
           <ThankYou
             prevStep={this.prevStep}
