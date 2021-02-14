@@ -1,5 +1,19 @@
-.orders-curated-items {
+.orders-wrapper {
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.orders-wrapper > h4 {
+  font-family: Benne;
+  color: #CC0202;
+  font-size: 30px;
+  font-weight: 1000;
+}
+
+#orders_cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 60%;
 }

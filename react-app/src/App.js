@@ -49,16 +49,16 @@ function App() {
 				<Route path="/orders" exact={true}>
 					<Orders />
 				</Route>
-				<Route path="/orders/new-order" exact={true}>
+				<Route path="/orders/new" exact={true}>
 					<OrderingSequence authenticated={authenticated} setAuthenticated={setAuthenticated}/>
 				</Route>
-				<Route path="/orders/new-order/wine" exact={true}>
+				<Route path="/orders/new/wine" exact={true}>
 					<PerfectWine authenticated={authenticated} setAuthenticated={setAuthenticated}/>
 				</Route>
-				<Route path="/orders/new-order/review" exact={true}>
+				<Route path="/orders/new/review" exact={true}>
 					<ReviewOrder authenticated={authenticated} setAuthenticated={setAuthenticated}/>
 				</Route>
-				<Route path="/orders/new-order/thank-you" exact={true}>
+				<Route path="/orders/new/thank-you" exact={true}>
 					<ThankYou authenticated={authenticated} setAuthenticated={setAuthenticated}/>
 				</Route>
 				<Route path="/menus" exact={true}>

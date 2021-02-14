@@ -24,19 +24,19 @@ function ReviewOrder () {
       <h5>Shipping Information</h5>
       <div className="review-order_shipping-information">
         <div className="shipping-information_user-address">
-          <input type="radio">Use my address</input>
-          <input placeholder="Street Address">props.users.address1</input>
-          <input placeholder="Suite/Apt #">props.users.address2</input>
-          <input placeholder="City">props.users.city</input>
+          <input type="radio"></input>
+          <input placeholder="Street Address"></input>
+          <input placeholder="Suite/Apt #"></input>
+          <input placeholder="City"></input>
           <select placeholder="State">
             <option>CA</option>
             <option>NJ</option>
             <option>NY</option>
           </select>
-          <input placeholder="Zip Code">props.users.zipcode</input>
+          <input placeholder="Zip Code"></input>
         </div>
         <div className="shipping-information_new-address">
-          <input type="radio">Use different address</input>
+          <input type="radio"></input>
           <input placeholder="Street Address" />
           <input placeholder="Suite/Apt #" />
           <input placeholder="City" />
