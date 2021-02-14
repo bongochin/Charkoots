@@ -3,10 +3,7 @@ import OrderingSequence from '../OrderingSequence';
 
 import Meats from '../OrderingSequence/Meats'
 import Cheeses from '../OrderingSequence/Cheeses'
-import Crackers from '../OrderingSequence/Crackers'
-import Fruits from '../OrderingSequence/Fruits'
-import Nuts from '../OrderingSequence/Nuts'
-import Spreads from '../OrderingSequence/Spreads'
+import Items from '../OrderingSequence/Items'
 
 import PerfectWine from '../PerfectWine';
 import ReviewOrder from '../ReviewOrder';
@@ -82,7 +79,7 @@ export default class OrderForm extends Component {
         )
       case 4:
         return (
-          <Crackers
+          <Items
             prevStep={this.prevStep}
             nextStep={this.nextStep}
             handleChange={this.handleChange}
@@ -91,7 +88,7 @@ export default class OrderForm extends Component {
         )
       case 5:
         return (
-          <Fruits
+          <PerfectWine
             prevStep={this.prevStep}
             nextStep={this.nextStep}
             handleChange={this.handleChange}
@@ -100,33 +97,6 @@ export default class OrderForm extends Component {
         )
       case 6:
         return (
-          <Nuts
-            prevStep={this.prevStep}
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        )
-      case 7:
-        return (
-          <Spreads
-            prevStep={this.prevStep}
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        )
-      case 8:
-        return (
-          <PerfectWine
-            prevStep={this.prevStep}
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        )
-      case 9:
-        return (
           <ReviewOrder
             prevStep={this.prevStep}
             nextStep={this.nextStep}
@@ -134,7 +104,7 @@ export default class OrderForm extends Component {
             values={values}
           />
         )
-      case 10:
+      case 7:
         return (
           <ThankYou
             prevStep={this.prevStep}

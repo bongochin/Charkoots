@@ -24,7 +24,7 @@ export default class Meats extends Component {
     return (
       <MuiThemeProvider>
         <React.Fragment>
-          <h4>Meats</h4>
+          <h4>Starring...</h4>
           <div className="order-navigation">
             <Button onClick={this.back}>
               PREVIOUS

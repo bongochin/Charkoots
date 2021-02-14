@@ -24,7 +24,7 @@ export default class Cheeses extends Component {
     return (
       <MuiThemeProvider>
         <React.Fragment>
-          <h4>Cheeses</h4>
+          <h4>Featuring...</h4>
           <div className="order-navigation">
             <Button onClick={this.back}>
               PREVIOUS
