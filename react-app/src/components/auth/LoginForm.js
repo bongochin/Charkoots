@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { login } from "../../services/auth";
+import './LoginForm.css'
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
   const [errors, setErrors] = useState([]);
@@ -30,7 +31,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   }
 
   return (
-    <form onSubmit={onLogin}>
+    <form className="loginform-wrapper" onSubmit={onLogin}>
       <div>
         {errors.map((error) => (
           <div>{error}</div>
@@ -57,6 +58,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
         />
         <button type="submit">Login</button>
       </div>
+      <button type="submit">Demo Login</button>
     </form>
   );
 };
