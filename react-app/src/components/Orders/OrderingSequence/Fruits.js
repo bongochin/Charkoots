@@ -17,9 +17,10 @@ export default class Fruits extends Component {
         <React.Fragment>
           <h4>Fruits</h4>
           <br />
-          <Button
-            onClick={this.continue}
-          >
+          <Button onClick={this.back}>
+            PREVIOUS
+          </Button>
+          <Button onClick={this.continue}>
             NEXT
           </Button>
         </React.Fragment>

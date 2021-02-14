@@ -1,0 +1,10 @@
+.order-navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.items-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+}

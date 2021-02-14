@@ -17,6 +17,17 @@ export default class OrderForm extends Component {
     step: 1,
     boardName: '',
     boardDescription: '',
+    boardCost:'',
+    meat1: '',
+    meat2: '',
+    meat3: '',
+    cheese1: '',
+    cheese2: '',
+    cheese3: '',
+    cracker: '',
+    fruit: '',
+    nut: '',
+    spread: '',
   }
 
   nextStep = () => {
@@ -39,8 +50,8 @@ export default class OrderForm extends Component {
 
   render() {
     const { step } = this.state;
-    const { boardName, boardDescription } = this.state
-    const values = { boardName, boardDescription }
+    const { boardName, boardDescription, boardCost, meat1, meat2, meat3, cheese1, cheese2, cheese3, cracker, fruit, nut, spread } = this.state
+    const values = { boardName, boardDescription, boardCost, meat1, meat2, meat3, cheese1, cheese2, cheese3, cracker, fruit, nut, spread }
 
     switch(step) {
       case 1:
