@@ -17,8 +17,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import FilterVintageIcon from '@material-ui/icons/FilterVintage';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 
 const mainNav = [
   {name: 'Home', direct:'/'},
@@ -27,12 +25,17 @@ const mainNav = [
 ]
 
 const menuNav = [
-  {name: 'Meats', direct:'/meats'},
-  {name: 'Cheeses', direct:'/cheeses'},
-  {name: 'Crackers', direct:'/crackers'},
-  {name: 'Fruits', direct:'/fruits'},
-  {name: 'Nuts', direct:'/nuts'},
-  {name: 'Spreads', direct:'/spreads'},
+  {name: 'Meats', direct:'/menus/meats'},
+  {name: 'Cheeses', direct:'/menus/cheeses'},
+  {name: 'Crackers', direct:'/menus/crackers'},
+  {name: 'Fruits', direct:'/menus/fruits'},
+  {name: 'Nuts', direct:'/menus/nuts'},
+  {name: 'Spreads', direct:'/menus/spreads'},
+]
+
+const userNav = [
+  {name: 'Log In', direct:'/login'},
+  {name: 'Sign Up', direct:'/sign-up'},
 ]
 
 const drawerWidth = 240;
@@ -127,8 +130,8 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Persistent drawer
+          <Typography variant="h6" noWrap onClick={() => history.push('/')}>
+            Charkoots
           </Typography>
         </Toolbar>
       </AppBar>
@@ -149,7 +152,10 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
           {mainNav.map((text) => (
-            <ListItem onClick={() => history.push(text.direct)}>
+            <ListItem button key={text} onClick={() => {
+              history.push(text.direct);
+              handleDrawerClose();
+            }}>
               <ListItemIcon><FilterVintageIcon /></ListItemIcon>
               <ListItemText primary={text.name} />
             </ListItem>
@@ -157,10 +163,25 @@ export default function PersistentDrawerLeft() {
         </List>
         <Divider />
         <List>
-          {['Meats', 'Cheeses', 'Crackers', 'Fruits', 'Nuts', 'Spreads'].map((text, index) => (
-            <ListItem button key={text}>
+          {menuNav.map((text) => (
+            <ListItem button key={text} onClick={() => {
+              history.push(text.direct);
+              handleDrawerClose();
+            }}>
               <ListItemIcon><FilterVintageIcon /></ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={text.name} />
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {userNav.map((text) => (
+            <ListItem button key={text} onClick={() => {
+              history.push(text.direct);
+              handleDrawerClose();
+            }}>
+              <ListItemIcon><FilterVintageIcon /></ListItemIcon>
+              <ListItemText primary={text.name} />
             </ListItem>
           ))}
         </List>
