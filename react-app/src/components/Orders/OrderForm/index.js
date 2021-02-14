@@ -14,7 +14,7 @@ export default class OrderForm extends Component {
     step: 1,
     boardName: '',
     boardDescription: '',
-    boardCost:'',
+    boardCost: 39.99,
     meat1: '',
     meat2: '',
     meat3: '',
@@ -91,7 +91,6 @@ export default class OrderForm extends Component {
           <PerfectWine
             prevStep={this.prevStep}
             nextStep={this.nextStep}
-            handleChange={this.handleChange}
             values={values}
           />
         )
@@ -100,7 +99,6 @@ export default class OrderForm extends Component {
           <ReviewOrder
             prevStep={this.prevStep}
             nextStep={this.nextStep}
-            handleChange={this.handleChange}
             values={values}
           />
         )
