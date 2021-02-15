@@ -1,32 +1,90 @@
-.perfect-wine-wrapper > h4 {
-  color: #CC0202;
-  font-size: 20px;
-}
-
-.perfect-wine_board-rendering {
+.perfect-wine-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.perfect-wine_board-rendering > img {
-  width: 60%;
-  max-height: 200px;
+.perfect-wine-wrapper > h3 {
+  font-family: Merryweather;
+  color: #CC0202;
+  font-size: 40px;
+  margin-bottom: 25px;
 }
 
+.perfect-wine_details {
+  display: flex;
+  flex-direction: column;
+  width:50%;
+}
+
+.perfect-wine_board-rendering {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 5px solid #FEC8A9;
+  border-radius: 15px;
+}
+
+.perfect-wine_board-rendering:hover {
+  opacity: 0.5;
+}
+
+.perfect-wine_boards {
+  display:flex;
+  flex-direction: row;
+}
+
+.perfect-wine_details > h4 {
+  font-family: Merryweather;
+  color: #CC0202;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
 .perfect-wine_display {
+  /* width: fit-content; */
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.perfect-wine_display > img {
+  height: 300px;
+  width: 80px;
+  margin-right: 25px;
+  margin-left: 15px;
 }
 
 .display_details {
   display: flex;
   flex-direction: column;
+  width: 500px;
 }
 
-.perfect-wine_redirect {
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
+.display_details > h5 {
+  font-family: Merryweather;
+  font-size: 25px;
+  color: #CC0202
+}
+
+.display_details > h6 {
+  font-family: Merryweather;
+  font-size: 15px;
+  font-style: italic;
+  color: grey;
+}
+
+.display_details > p {
+  font-family: Merryweather;
+  font-size: 15px;
+}
+
+.perfect-wine_buttons {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
 }

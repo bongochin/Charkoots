@@ -1,76 +1,54 @@
-import React from 'react';
-import './ReviewOrder.css';
+import React, { Component } from 'react';
+import { MuiThemeProvider } from '@material-ui/core/'
+import { List } from '@material-ui/core/List/'
+import { ListItem } from '@material-ui/core/ListItem'
+import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button'
+import './ReviewOrder.css'
 
-function ReviewOrder () {
-  return (
-    <div className="review-order-wrapper">
-      <h4>Review Your Order</h4>
-      <h5>Your Charkoot Board</h5>
-      <div className="review-order_board-review">
-        <img src="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" />
-        <p>props.boards.board_name</p>
-        <p>props.boards.board_cost</p>
-        <p>props.boards.board_description</p>
-        <p>"Characteristics" Component</p>
-      </div>
-      <h5>Your Perfect Wine</h5>
-      <div className="review-order_wine-review">
-        <img src="https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" />
-        <p>props.wines.wine_name</p>
-        <p>props.wines.wine_cost</p>
-        <p>props.wines.wine_description</p>
-        <p>"Characteristics" Component</p>
-      </div>
-      <h5>Shipping Information</h5>
-      <div className="review-order_shipping-information">
-        <div className="shipping-information_user-address">
-          <input type="radio"></input>
-          <input placeholder="Street Address"></input>
-          <input placeholder="Suite/Apt #"></input>
-          <input placeholder="City"></input>
-          <select placeholder="State">
-            <option>CA</option>
-            <option>NJ</option>
-            <option>NY</option>
-          </select>
-          <input placeholder="Zip Code"></input>
-        </div>
-        <div className="shipping-information_new-address">
-          <input type="radio"></input>
-          <input placeholder="Street Address" />
-          <input placeholder="Suite/Apt #" />
-          <input placeholder="City" />
-          <select placeholder="State">
-            <option>CA</option>
-            <option>NJ</option>
-            <option>NY</option>
-          </select>
-          <input placeholder="Zip Code" />
-        </div>
-      </div>
-      <div className="review-order_total">
-        <table>
-          <tr>
-            <th>Food & Beverage</th>
-            <td>props.boards.board_cost</td>
-          </tr>
-          <tr>
-            <th>Delivery Charge</th>
-            <td>$2.99</td>
-          </tr>
-          <tr>
-            <th>Taxes</th>
-            <td>FE calc : (F&B + Delivery) * 0.07 </td>
-          </tr>
-          <tr>
-            <th>Order Total</th>
-            <td>FE calc: F&B + Delivery + Taxes</td>
-          </tr>
-        </table>
-        <button>CHECKOUT</button>
-      </div>
-    </div>
-  )
+export default class ReviewOrder extends Component {
+  continue = e => {
+    e.preventDefault();
+    // Process form to API...
+    this.props.nextStep();
+  }
+
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  }
+
+  render () {
+    const { values, handleChange } = this.props;
+    return (
+      <MuiThemeProvider>
+        <React.Fragment>
+          <h4>Let's give it a name.</h4>
+          <TextField
+            hintText="Enter your Board's Name"
+            placeholder="Board Name"
+            onChange={handleChange('boardName')}
+            defaultValue={values.boardName}
+          />
+          <br />
+          <TextField
+            hintText="Enter your Board's Description"
+            placeholder="Board Description"
+            onChange={handleChange('boardDescription')}
+            defaultValue={values.boardDescription}
+          />
+          <br />
+          <Button onClick={this.continue}>
+            NEXT
+          </Button>
+        </React.Fragment>
+      </MuiThemeProvider>
+    )
+  }
 }
 
-export default ReviewOrder;
+const styles = {
+  button: {
+    margin: 15
+  }
+}
