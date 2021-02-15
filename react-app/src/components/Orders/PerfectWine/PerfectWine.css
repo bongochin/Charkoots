@@ -7,12 +7,31 @@
 .perfect-wine-wrapper > h3 {
   font-family: Merryweather;
   color: #CC0202;
-  font-size: 25px;
+  font-size: 40px;
+  margin-bottom: 25px;
 }
 
 .perfect-wine_details {
-  margin-left: 20%;
-  margin-right: 20%;
+  display: flex;
+  flex-direction: column;
+  width:50%;
+}
+
+.perfect-wine_board-rendering {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 5px solid #FEC8A9;
+  border-radius: 15px;
+}
+
+.perfect-wine_board-rendering:hover {
+  opacity: 0.5;
+}
+
+.perfect-wine_boards {
+  display:flex;
+  flex-direction: row;
 }
 
 .perfect-wine_details > h4 {
@@ -23,13 +42,6 @@
   margin-bottom: 10px;
 }
 
-.perfect-wine_board-rendering {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 5px solid #FEC8A9;
-  border-radius: 15px;
-}
 
 .perfect-wine_display {
   /* width: fit-content; */

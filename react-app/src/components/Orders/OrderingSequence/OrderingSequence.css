@@ -1,37 +1,20 @@
-.ordering-sequence_progress-bar {
-  display: flex;
-  width: auto;
-  justify-content: space-evenly;
-}
-
-.ordering-sequence_board-rendering {
+.ordering-sequence-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.ordering-sequence_board-rendering > img {
-  width: 60%;
-  max-height: 200px;
-}
-
-.ordering-sequence_item-selection-board {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.selection-board_left {
+.ordering-sequence_form {
   display: flex;
   flex-direction: column;
+  width: 600px;
+  margin-bottom: 10px;
 }
 
-.selection-board_center {
-  display: flex;
-  flex-direction: column;
-}
-
-.selection-board_right {
-  display: flex;
-  flex-direction: column;
+.ordering-sequence_form > h4 {
+  font-family: Merryweather;
+  color: #CC0202;
+  font-size: 40px;
+  margin-bottom: 10px;
 }

@@ -41,6 +41,27 @@ export default class OrderForm extends Component {
     });
   }
 
+  stepTwo = () => {
+    const { step } = this.state;
+    this.setState({
+      step: 2
+    });
+  }
+
+  stepThree = () => {
+    const { step } = this.state;
+    this.setState({
+      step: 3
+    });
+  }
+
+  stepFour = () => {
+    const { step } = this.state;
+    this.setState({
+      step: 4
+    });
+  }
+
   handleChange = input => e => {
     this.setState({[input]: e.target.value})
   }
@@ -65,6 +86,9 @@ export default class OrderForm extends Component {
             prevStep={this.prevStep}
             nextStep={this.nextStep}
             handleChange={this.handleChange}
+            stepTwo={this.stepTwo}
+            stepThree={this.stepThree}
+            stepFour={this.stepFour}
             values={values}
           />
         )
@@ -74,6 +98,9 @@ export default class OrderForm extends Component {
             prevStep={this.prevStep}
             nextStep={this.nextStep}
             handleChange={this.handleChange}
+            stepTwo={this.stepTwo}
+            stepThree={this.stepThree}
+            stepFour={this.stepFour}
             values={values}
           />
         )
@@ -83,6 +110,9 @@ export default class OrderForm extends Component {
             prevStep={this.prevStep}
             nextStep={this.nextStep}
             handleChange={this.handleChange}
+            stepTwo={this.stepTwo}
+            stepThree={this.stepThree}
+            stepFour={this.stepFour}
             values={values}
           />
         )
