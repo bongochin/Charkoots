@@ -12,8 +12,6 @@
   max-width: 50%;
   justify-content: center;
   font-family: Merryweather;
-  /* padding-right: 25%;
-  padding-left: 25%; */
 }
 
 .homepage-images {
@@ -29,12 +27,14 @@
 .homepage-paragraph > h4 {
   color: #8D0133;
   font-size: 40px;
+  font-family: 'Merriweather', serif;
   font-style: italic;
   padding-top: 50px;
   padding-bottom: 30px;
 }
 
 .homepage-paragraph > p {
+  font-family: 'Benne', serif;
   font-size: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -57,10 +57,11 @@
 .homepage-wrapper > button:hover {
   color: #8D0133;
   background-color: white;
-  border: 5px solid #8D0133;
+  border: 5px solid #FAB4A0;
   opacity: 0.8;
   border-radius: 10px;
   font-size: 20px;
+  font-weight: bolder;
   margin: 50px;
   padding-top: 5px;
   padding-bottom: 5px;

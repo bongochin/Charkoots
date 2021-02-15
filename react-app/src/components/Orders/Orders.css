@@ -8,8 +8,10 @@
 }
 
 .orders-wrapper > h4 {
-  font-family: Benne;
-  color: #CC0202;
+  font-family: 'Merriweather', serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #8E0232;
   font-size: 30px;
   font-weight: 1000;
 }

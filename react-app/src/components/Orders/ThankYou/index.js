@@ -1,8 +1,12 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
+import Button from '@material-ui/core/Button';
+import { useHistory } from 'react-router-dom'
 import './ThankYou.css';
 
 function ThankYou () {
+  const history = useHistory();
+
   return (
     <div className="thank-you-wrapper">
       <h2>Thank you for your order!</h2>
@@ -12,9 +16,10 @@ function ThankYou () {
       <br />
       <div className="thank-you_icons">
         <SocialIcon url="https://github.com/bongochin" />
-				<SocialIcon url="https://www.linkedin.com/in/danielmchin/" />
 				<SocialIcon url="mailto:danielmchin@outlook.com" />
+				<SocialIcon url="https://www.linkedin.com/in/danielmchin/" />
       </div>
+      <Button id="button" onClick={() => history.push('/')}>RETURN TO MAIN PAGE</Button>
     </div>
   )
 }

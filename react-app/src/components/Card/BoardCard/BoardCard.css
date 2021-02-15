@@ -1,0 +1,13 @@
+.board-card-wrapper {
+  font-family: 'Merriweather', serif;
+  height: 550px;
+}
+
+.content {
+  height: 220px;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
