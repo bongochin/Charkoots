@@ -12,7 +12,7 @@ import ThankYou from '../ThankYou';
 export default class OrderForm extends Component {
   state = {
     step: 1,
-    boardName: '',
+    boardName: 'Build-Your-Own Board',
     boardDescription: '',
     boardCost: 39.99,
     meat1: '',
@@ -25,6 +25,7 @@ export default class OrderForm extends Component {
     fruit: '',
     nut: '',
     spread: '',
+    address: '',
   }
 
   nextStep = () => {
@@ -68,8 +69,8 @@ export default class OrderForm extends Component {
 
   render() {
     const { step } = this.state;
-    const { boardName, boardDescription, boardCost, meat1, meat2, meat3, cheese1, cheese2, cheese3, cracker, fruit, nut, spread } = this.state
-    const values = { boardName, boardDescription, boardCost, meat1, meat2, meat3, cheese1, cheese2, cheese3, cracker, fruit, nut, spread }
+    const { boardName, boardDescription, boardCost, meat1, meat2, meat3, cheese1, cheese2, cheese3, cracker, fruit, nut, spread, address } = this.state
+    const values = { boardName, boardDescription, boardCost, meat1, meat2, meat3, cheese1, cheese2, cheese3, cracker, fruit, nut, spread, address }
 
     switch(step) {
       case 1:
@@ -129,6 +130,7 @@ export default class OrderForm extends Component {
           <ReviewOrder
             prevStep={this.prevStep}
             nextStep={this.nextStep}
+            handleChange={this.handleChange}
             values={values}
           />
         )

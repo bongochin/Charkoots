@@ -54,10 +54,10 @@ export default class Meats extends Component {
                 </List>
               </div>
               <div className="order-navigation">
-                <Button onClick={this.back}>
+                <Button id="buttons" onClick={this.back}>
                   <ArrowLeftIcon /> PREVIOUS
                 </Button>
-                <Button onClick={this.continue}>
+                <Button id="buttons" onClick={this.continue}>
                   NEXT <ArrowRightIcon />
                 </Button>
               </div>

@@ -32,7 +32,7 @@ export default class OrderingSequence extends Component {
                 defaultValue={values.boardDescription}
               />
             </div>
-            <Button onClick={this.continue}>
+            <Button id="buttons" onClick={this.continue}>
               START <ArrowRightIcon />
             </Button>
           </React.Fragment>

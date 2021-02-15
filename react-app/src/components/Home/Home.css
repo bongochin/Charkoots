@@ -27,7 +27,7 @@
 }
 
 .homepage-paragraph > h4 {
-  color: #CC0202;
+  color: #8D0133;
   font-size: 40px;
   font-style: italic;
   padding-top: 50px;
@@ -55,9 +55,9 @@
 }
 
 .homepage-wrapper > button:hover {
-  color: #CC0202;
+  color: #8D0133;
   background-color: white;
-  border: 5px solid #CC0202;
+  border: 5px solid #8D0133;
   opacity: 0.8;
   border-radius: 10px;
   font-size: 20px;

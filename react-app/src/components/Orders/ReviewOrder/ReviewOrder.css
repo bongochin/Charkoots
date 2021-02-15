@@ -1,0 +1,128 @@
+.review-order-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.review-order-wrapper > h3 {
+  font-family: Merryweather;
+  color: #8D0133;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+.review-order-display > h4 {
+  font-family: Merryweather;
+  color: #FEC8A9;
+  font-size: 25px;
+  padding-left: 10px;
+  background-color: #8D0133;
+  border: 5px solid #8D0133;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.review-order_board {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.board_details {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-right: 25px;
+}
+
+.board_details > h5 {
+  font-family: Merryweather;
+  font-size: 25px;
+  color: #8D0133;
+}
+
+.board_details > h6 {
+  font-family: Merryweather;
+  font-size: 15px;
+  font-style: italic;
+  color: grey;
+}
+
+.board_details > p {
+  font-family: Merryweather;
+  font-size: 15px;
+}
+
+.review-order_wine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.wine_details {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-right: 25px;
+}
+
+.wine_details > h5 {
+  font-family: Merryweather;
+  font-size: 25px;
+  color: #8D0133;
+}
+
+.wine_details > h6 {
+  font-family: Merryweather;
+  font-size: 15px;
+  font-style: italic;
+  color: grey;
+}
+
+.wine_details > p {
+  font-family: Merryweather;
+  font-size: 15px;
+}
+
+
+#board-img {
+  height: 300px;
+  width: 300px;
+  margin-right: 25px;
+  margin-left: 15px;
+}
+
+#wine-img {
+  height: 300px;
+  width: 80px;
+  margin-right: 125px;
+  margin-left: 135px;
+}
+
+.review-order_shipping-address {
+  display: flex;
+  justify-content: center;
+}
+
+/* .shipping-address_forms {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid green;
+}
+
+.shipping-address_form {
+  border: 1px solid purple;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.address-column {
+  display: flex;
+  flex-direction: column;
+} */
