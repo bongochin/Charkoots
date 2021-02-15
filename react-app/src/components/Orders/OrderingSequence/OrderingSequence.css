@@ -3,18 +3,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
 }
 
 .ordering-sequence_form {
   display: flex;
   flex-direction: column;
   width: 600px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .ordering-sequence_form > h4 {
   font-family: Merryweather;
   color: #CC0202;
   font-size: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }

@@ -32,10 +32,8 @@ export default class OrderingSequence extends Component {
                 defaultValue={values.boardDescription}
               />
             </div>
-            <Button
-              onClick={this.continue}
-            >
-              NEXT <ArrowRightIcon />
+            <Button onClick={this.continue}>
+              START <ArrowRightIcon />
             </Button>
           </React.Fragment>
         </MuiThemeProvider>
