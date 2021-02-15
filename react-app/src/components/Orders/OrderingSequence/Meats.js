@@ -37,42 +37,42 @@ export default class Meats extends Component {
             <FormControl component="fieldset">
               <FormLabel component="legend">First Meat</FormLabel>
               <RadioGroup aria-label="meats" name="meat1" value={values.meat1} onChange={handleChange('meat1')}>
-                <FormControlLabel value="1" control={<Radio />} label="Prosciutto di San Daniele" />
-                <FormControlLabel value="2" control={<Radio />} label="Mortadella" />
-                <FormControlLabel value="3" control={<Radio />} label="Jamon Iberico" />
-                <FormControlLabel value="4" control={<Radio />} label="Soppressata" />
-                <FormControlLabel value="5" control={<Radio />} label="Bresaola" />
-                <FormControlLabel value="6" control={<Radio />} label="Capocollo" />
-                <FormControlLabel value="7" control={<Radio />} label="Spanish Chorizo" />
-                <FormControlLabel value="8" control={<Radio />} label="Speck" />
+                <FormControlLabel value="Prosciutto di San Daniele" control={<Radio />} label="Prosciutto di San Daniele" />
+                <FormControlLabel value="Mortadella" control={<Radio />} label="Mortadella" />
+                <FormControlLabel value="Jamon Iberico" control={<Radio />} label="Jamon Iberico" />
+                <FormControlLabel value="Soppressata" control={<Radio />} label="Soppressata" />
+                <FormControlLabel value="Bresaola" control={<Radio />} label="Bresaola" />
+                <FormControlLabel value="Capocollo" control={<Radio />} label="Capocollo" />
+                <FormControlLabel value="Spanish Chorizo" control={<Radio />} label="Spanish Chorizo" />
+                <FormControlLabel value="Speck" control={<Radio />} label="Speck" />
               </RadioGroup>
             </FormControl>
             <br />
             <FormControl component="fieldset">
               <FormLabel component="legend">Second Meat</FormLabel>
               <RadioGroup aria-label="meats" name="meat2" value={values.meat2} onChange={handleChange('meat2')}>
-                <FormControlLabel value="1" control={<Radio />} label="Prosciutto di San Daniele" />
-                <FormControlLabel value="2" control={<Radio />} label="Mortadella" />
-                <FormControlLabel value="3" control={<Radio />} label="Jamon Iberico" />
-                <FormControlLabel value="4" control={<Radio />} label="Soppressata" />
-                <FormControlLabel value="5" control={<Radio />} label="Bresaola" />
-                <FormControlLabel value="6" control={<Radio />} label="Capocollo" />
-                <FormControlLabel value="7" control={<Radio />} label="Spanish Chorizo" />
-                <FormControlLabel value="8" control={<Radio />} label="Speck" />
+                <FormControlLabel value="Prosciutto di San Daniele" control={<Radio />} label="Prosciutto di San Daniele" />
+                <FormControlLabel value="Mortadella" control={<Radio />} label="Mortadella" />
+                <FormControlLabel value="Jamon Iberico" control={<Radio />} label="Jamon Iberico" />
+                <FormControlLabel value="Soppressata" control={<Radio />} label="Soppressata" />
+                <FormControlLabel value="Bresaola" control={<Radio />} label="Bresaola" />
+                <FormControlLabel value="Capocollo" control={<Radio />} label="Capocollo" />
+                <FormControlLabel value="Spanish Chorizo" control={<Radio />} label="Spanish Chorizo" />
+                <FormControlLabel value="Speck" control={<Radio />} label="Speck" />
               </RadioGroup>
             </FormControl>
             <br />
             <FormControl component="fieldset">
               <FormLabel component="legend">Third Meat</FormLabel>
               <RadioGroup aria-label="meats" name="meat3" value={values.meat3} onChange={handleChange('meat3')}>
-                <FormControlLabel value="1" control={<Radio />} label="Prosciutto di San Daniele" />
-                <FormControlLabel value="2" control={<Radio />} label="Mortadella" />
-                <FormControlLabel value="3" control={<Radio />} label="Jamon Iberico" />
-                <FormControlLabel value="4" control={<Radio />} label="Soppressata" />
-                <FormControlLabel value="5" control={<Radio />} label="Bresaola" />
-                <FormControlLabel value="6" control={<Radio />} label="Capocollo" />
-                <FormControlLabel value="7" control={<Radio />} label="Spanish Chorizo" />
-                <FormControlLabel value="8" control={<Radio />} label="Speck" />
+                <FormControlLabel value="Prosciutto di San Daniele" control={<Radio />} label="Prosciutto di San Daniele" />
+                <FormControlLabel value="Mortadella" control={<Radio />} label="Mortadella" />
+                <FormControlLabel value="Jamon Iberico" control={<Radio />} label="Jamon Iberico" />
+                <FormControlLabel value="Soppressata" control={<Radio />} label="Soppressata" />
+                <FormControlLabel value="Bresaola" control={<Radio />} label="Bresaola" />
+                <FormControlLabel value="Capocollo" control={<Radio />} label="Capocollo" />
+                <FormControlLabel value="Spanish Chorizo" control={<Radio />} label="Spanish Chorizo" />
+                <FormControlLabel value="Speck" control={<Radio />} label="Speck" />
               </RadioGroup>
             </FormControl>
           </div>

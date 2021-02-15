@@ -37,56 +37,56 @@ export default class Items extends Component {
             <FormControl component="fieldset">
               <FormLabel component="legend">Crackers</FormLabel>
               <RadioGroup aria-label="crackers" name="cracker" value={values.cracker} onChange={handleChange('cracker')}>
-                <FormControlLabel value="17" control={<Radio />} label="Toasted Baguettes" />
-                <FormControlLabel value="18" control={<Radio />} label="Multi-Seed" />
-                <FormControlLabel value="19" control={<Radio />} label="Whole Wheat" />
-                <FormControlLabel value="20" control={<Radio />} label="Sourdough Flatbreads" />
-                <FormControlLabel value="21" control={<Radio />} label="Croccantinis" />
-                <FormControlLabel value="22" control={<Radio />} label="Gluten-Free" />
-                <FormControlLabel value="23" control={<Radio />} label="Raisin Pecan Crisps" />
-                <FormControlLabel value="24" control={<Radio />} label="Ritz" />
+                <FormControlLabel value="Toasted Baguettes" control={<Radio />} label="Toasted Baguettes" />
+                <FormControlLabel value="Multi-Seed" control={<Radio />} label="Multi-Seed" />
+                <FormControlLabel value="Whole Wheat" control={<Radio />} label="Whole Wheat" />
+                <FormControlLabel value="Sourdough Flatbreads" control={<Radio />} label="Sourdough Flatbreads" />
+                <FormControlLabel value="Croccantinis" control={<Radio />} label="Croccantinis" />
+                <FormControlLabel value="Gluten-Free" control={<Radio />} label="Gluten-Free" />
+                <FormControlLabel value="Raisin Pecan Crisps" control={<Radio />} label="Raisin Pecan Crisps" />
+                <FormControlLabel value="Ritz" control={<Radio />} label="Ritz" />
               </RadioGroup>
             </FormControl>
             <br />
             <FormControl component="fieldset">
               <FormLabel component="legend">Fruits</FormLabel>
               <RadioGroup aria-label="fruits" name="fruit" value={values.fruit} onChange={handleChange('fruit')}>
-                <FormControlLabel value="25" control={<Radio />} label="Mission Figs" />
-                <FormControlLabel value="26" control={<Radio />} label="Champagne Grapes" />
-                <FormControlLabel value="27" control={<Radio />} label="Wild Berries" />
-                <FormControlLabel value="28" control={<Radio />} label="Luxardo Cherries" />
-                <FormControlLabel value="29" control={<Radio />} label="Dried Apricots" />
-                <FormControlLabel value="30" control={<Radio />} label="Mixed Olives" />
-                <FormControlLabel value="31" control={<Radio />} label="Cornichons" />
-                <FormControlLabel value="32" control={<Radio />} label="Artichoke Hearts" />
+                <FormControlLabel value="Mission Figs" control={<Radio />} label="Mission Figs" />
+                <FormControlLabel value="Champagne Grapes" control={<Radio />} label="Champagne Grapes" />
+                <FormControlLabel value="Wild Berries" control={<Radio />} label="Wild Berries" />
+                <FormControlLabel value="Luxardo Cherries" control={<Radio />} label="Luxardo Cherries" />
+                <FormControlLabel value="Dried Apricots" control={<Radio />} label="Dried Apricots" />
+                <FormControlLabel value="Mixed Olives" control={<Radio />} label="Mixed Olives" />
+                <FormControlLabel value="Cornichons" control={<Radio />} label="Cornichons" />
+                <FormControlLabel value="Artichoke Hearts" control={<Radio />} label="Artichoke Hearts" />
               </RadioGroup>
             </FormControl>
             <br />
             <FormControl component="fieldset">
               <FormLabel component="legend">Nuts</FormLabel>
               <RadioGroup aria-label="nuts" name="nut" value={values.nut} onChange={handleChange('nut')}>
-                <FormControlLabel value="33" control={<Radio />} label="Marcona Almonds" />
-                <FormControlLabel value="34" control={<Radio />} label="Praline Pecans" />
-                <FormControlLabel value="35" control={<Radio />} label="Pistachios" />
-                <FormControlLabel value="36" control={<Radio />} label="Hazelnuts" />
-                <FormControlLabel value="37" control={<Radio />} label="Macadamia Nuts" />
-                <FormControlLabel value="38" control={<Radio />} label="Cashews" />
-                <FormControlLabel value="39" control={<Radio />} label="Chocolate Peanuts" />
-                <FormControlLabel value="40" control={<Radio />} label="Yogurt Almonds" />
+                <FormControlLabel value="Marcona Almonds" control={<Radio />} label="Marcona Almonds" />
+                <FormControlLabel value="Praline Pecans" control={<Radio />} label="Praline Pecans" />
+                <FormControlLabel value="Pistachios" control={<Radio />} label="Pistachios" />
+                <FormControlLabel value="Hazelnuts" control={<Radio />} label="Hazelnuts" />
+                <FormControlLabel value="Macadamia Nuts" control={<Radio />} label="Macadamia Nuts" />
+                <FormControlLabel value="Cashews" control={<Radio />} label="Cashews" />
+                <FormControlLabel value="Chocolate Peanuts" control={<Radio />} label="Chocolate Peanuts" />
+                <FormControlLabel value="Yogurt Almonds" control={<Radio />} label="Yogurt Almonds" />
               </RadioGroup>
             </FormControl>
             <br />
             <FormControl component="fieldset">
               <FormLabel component="legend">Spreads</FormLabel>
               <RadioGroup aria-label="spreads" name="spread" value={values.spread} onChange={handleChange('spread')}>
-                <FormControlLabel value="41" control={<Radio />} label="Spicy Honey" />
-                <FormControlLabel value="42" control={<Radio />} label="Truffle Olive Oil" />
-                <FormControlLabel value="43" control={<Radio />} label="Orange Marmalade" />
-                <FormControlLabel value="44" control={<Radio />} label="Fig Jam" />
-                <FormControlLabel value="45" control={<Radio />} label="Sun-dried Tomato Puree" />
-                <FormControlLabel value="46" control={<Radio />} label="Dijon Mustard" />
-                <FormControlLabel value="47" control={<Radio />} label="Caramelized Onion Jam" />
-                <FormControlLabel value="48" control={<Radio />} label="Guacamole" />
+                <FormControlLabel value="Spicy Honey" control={<Radio />} label="Spicy Honey" />
+                <FormControlLabel value="Truffle Olive Oil" control={<Radio />} label="Truffle Olive Oil" />
+                <FormControlLabel value="Orange Marmalade" control={<Radio />} label="Orange Marmalade" />
+                <FormControlLabel value="Fig Jam" control={<Radio />} label="Fig Jam" />
+                <FormControlLabel value="Sun-dried Tomato Puree" control={<Radio />} label="Sun-dried Tomato Puree" />
+                <FormControlLabel value="Dijon Mustard" control={<Radio />} label="Dijon Mustard" />
+                <FormControlLabel value="Caramelized Onion Jam" control={<Radio />} label="Caramelized Onion Jam" />
+                <FormControlLabel value="Guacamole" control={<Radio />} label="Guacamole" />
               </RadioGroup>
             </FormControl>
           </div>
