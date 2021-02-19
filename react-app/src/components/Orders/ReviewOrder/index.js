@@ -136,57 +136,60 @@ export default class ReviewOrder extends Component {
               <div className="review-order_shipping-address">
                 <FormControl component="fieldset">
                   <RadioGroup className="shipping-address_forms" aria-label="address" name="address" value={values.address} onChange={handleChange('address')}>
-                    <div className="shipping-address_form">
-                      <FormControlLabel control={<Radio />} label="Use my address"/>
-                        <div className="address-column">
-                          <TextField
-                            placeholder="Street Address"
-                            defaultValue="1600 Temple Rd"
-                          />
-                          <TextField
-                            placeholder="Suite/Apt #"
-                            defaultValue="Suite 16"
-                          />
-                          <TextField
-                            placeholder="City"
-                            defaultValue="Coruscant"
-                          />
-                          <TextField
-                            placeholder="State"
-                            defaultValue="NJ"
-                          />
-                          <TextField
-                            placeholder="Zipcode"
-                            defaultValue="07913"
-                          />
-                        </div>
+                    <div className="form-wrapper">
+                      <div className="shipping-address_form">
+                        <FormControlLabel control={<Radio />} label="Use my address"/>
+                          <div className="address-column">
+                            <TextField
+                              placeholder="Street Address"
+                              defaultValue="1600 Temple Rd"
+                            />
+                            <TextField
+                              placeholder="Suite/Apt #"
+                              defaultValue="Suite 16"
+                            />
+                            <TextField
+                              placeholder="City"
+                              defaultValue="Coruscant"
+                            />
+                            <TextField
+                              placeholder="State"
+                              defaultValue="NJ"
+                            />
+                            <TextField
+                              placeholder="Zipcode"
+                              defaultValue="07913"
+                            />
+                          </div>
+                      </div>
+                      <div className="shipping-address_form">
+                        <FormControlLabel control={<Radio />} label="Use different address"/>
+                          <div className="address-column">
+                            <TextField
+                              placeholder="Street Address"
+                            />
+                            <TextField
+                              placeholder="Suite/Apt #"
+                            />
+                            <TextField
+                              placeholder="City"
+                            />
+                            <TextField
+                              placeholder="State"
+                            />
+                            <TextField
+                              placeholder="Zipcode"
+                            />
+                          </div>
+                      </div>
                     </div>
-                    <div className="shipping-address_form">
-                      <FormControlLabel control={<Radio />} label="Use different address"/>
-                        <div className="address-column">
-                          <TextField
-                            placeholder="Street Address"
-                          />
-                          <TextField
-                            placeholder="Suite/Apt #"
-                          />
-                          <TextField
-                            placeholder="City"
-                          />
-                          <TextField
-                            placeholder="State"
-                          />
-                          <TextField
-                            placeholder="Zipcode"
-                          />
-                        </div>
-                    </div>
+
                   </RadioGroup>
                 </FormControl>
               </div>
             </div>
             <Button id="button" onClick={this.continue}>
-              SUBMIT
+              CHECKOUT
             </Button>
           </React.Fragment>
         </MuiThemeProvider>

@@ -109,14 +109,12 @@
   justify-content: center;
 }
 
-/* .shipping-address_forms {
+.shipping-address_forms {
   display: flex;
   flex-direction: row;
-  border: 1px solid green;
 }
 
 .shipping-address_form {
-  border: 1px solid purple;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -125,4 +123,9 @@
 .address-column {
   display: flex;
   flex-direction: column;
-} */
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+}
