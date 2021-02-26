@@ -1,6 +1,35 @@
+.menus-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 100px;
+
+}
+
+.menus-wrapper > h4 {
+  display: flex;
+  align-self: flex-start;
+  font-family: Merryweather;
+  color: #8D0133;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
 .menus-board-items {
   display: flex;
-  flex-direction: row;
+  flex-direction: rows;
+  justify-content: center;
+  margin: 15px;
+}
+
+.board-items_column {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  min-height: 300px;
+  border: 1px solid red;
 }
 
 .menus-curated-items {
