@@ -1,0 +1,26 @@
+.menu-card-wrapper {
+  font-family: 'Merriweather', serif;
+  height: 320px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 250px;
+  min-width: 200px;
+}
+
+.menu-content_type {
+  align-self: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
