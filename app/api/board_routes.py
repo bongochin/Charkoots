@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from flask_login import login_required
-from app.models import db, Board, Board_Item
+from app.models import db, Board
 from app.forms.board_form import BoardForm
 
 board_routes = Blueprint('boards', __name__)
