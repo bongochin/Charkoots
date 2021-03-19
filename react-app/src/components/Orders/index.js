@@ -19,7 +19,7 @@ const curated = [
 	{
 		name: 'Rat Pack',
 		url: 'https://cdn.shopify.com/s/files/1/0308/1777/9849/products/WebsiteM_C8.262_1080x1080.jpg?v=1602388225',
-		description: "It's what this generation calls it a GOAT. Best consumed with your grandapa to discuss how 'grand' things were back then",
+		description: "It's what this generation calls it a GOAT. Best consumed with your grandapa to discuss how 'grand' things were back then.",
 		ingredients: "Prosciutto di San Daniele, Jamon Iberico, Capocollo, Triple Creme Brie, Manchego, Gouda, Croccatini, Champagne Grapes, Marcona Almonds, Truffle Olive Oil"
 	},
 	{
@@ -38,7 +38,7 @@ const curated = [
 		name: 'The Number 4',
 		url: 'https://cdn.shopify.com/s/files/1/0308/1777/9849/products/IMG_2093_1080x1080.jpg?v=1602444573',
 		description: "Time-tested, fail-proof combination that always seems to be the best seller at every deli.",
-		ingredients: "Mortadella, Soppressata, Capocollo, Parmigiano Reggiano, Gouda, Medium Vermont Cheddar, Toasted Baguettes, Cornichons, Yogurt Almonds, Sun-dried Tomato Puree"
+		ingredients: "Mortadella, Soppressata, Capocollo, Manchego, Gouda, Triple creme Brie, Toasted Baguettes, Cornichons, Yogurt Almonds, Sun-dried Tomato Puree"
 	},
 	{
 		name: 'The Magnum',
@@ -49,8 +49,8 @@ const curated = [
 	{
 		name: 'I Warned Ya!',
 		url: 'https://cdn.shopify.com/s/files/1/0308/1777/9849/products/IMG_2092_1080x1080.jpg?v=1602443864',
-		description: "It's packed with flavor, heat and spices that I doubt you're able to handle it. Wait, are you sure? Well, don't tell me I didn't warned ya!",
-		ingredients: "Chorizo, Capocollo, Soppressata, Robiola, Gouda, Manchego, Sourdough Flatbread, Artichoke Hearts, Pistachios, Spicy Honey"
+		description: "It's packed with flavor, heat and spices that I doubt you'd able to handle it. Wait, are you sure? Well, don't tell me I didn't warned ya!",
+		ingredients: "Chorizo, Capocollo, Soppressata, Robiola, Gouda, Manchego, Sourdough Flatbread, Mixed Olives, Pistachios, Spicy Honey"
 	},
 ]
 

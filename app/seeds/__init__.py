@@ -33,14 +33,14 @@ def seed():
     seed_board_items9()
     seed_board_items10()
     seed_wines()
-    # seed_boards()
+    seed_boards()
     # seed_orders()
 
 # Creates the `flask seed undo` command
 @seed_commands.command('undo')
 def undo():
     # undo_orders()
-    # undo_boards()
+    undo_boards()
     undo_wines()
     seed_board_items1()
     seed_board_items2()
