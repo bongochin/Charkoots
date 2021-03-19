@@ -34,8 +34,8 @@ def seed_orders():
     # =====================================================
 
     order3 = Order(
-        board_id=1,
-        wine_id=2,
+        board_id=3,
+        wine_id=3,
         shipping_address1 = '1600 Pennsylvania Avenue',
         shipping_address2 = 'West Wing',
         shipping_city = 'Washington',

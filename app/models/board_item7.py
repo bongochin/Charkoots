@@ -1,8 +1,8 @@
 from .db import db
 
-class Board_Item(db.Model):
+class Board_Item7(db.Model):
 
-  __tablename__ = 'board_items'
+  __tablename__ = 'board_items7'
 
   id = db.Column(db.Integer, primary_key=True)
   item_type = db.Column(db.String(50), nullable=False)
@@ -17,7 +17,7 @@ class Board_Item(db.Model):
 
 
   # Board Item is related to a board
-  board = db.relationship('Board', back_populates='board_items')
+  board = db.relationship('Board', back_populates='board_items7')
 
   def to_dict(self):
     return {
