@@ -28,7 +28,21 @@ export const setBoardItem = items => {
 // FETCHES
 export const fetchAllItems = () => {
   return async (dispatch) => {
-    const responseFromDb = await fetch('/api/boardItems')
+    const responseFromDb = await fetch('/api/menus');
+    const menus = await responseFromDb.json();
+    dispatch(
+      setItems(menus)
+    )
+  }
+};
+
+export const fetchBoardItems = boardId => {
+  return async (dispatch) => {
+    const responseFromDb = await fetch(`/api/boards/${boardId}/items`);
+    const menus = await responseFromDb.json();
+    dispatch(
+      setItems(menus)
+    )
   }
 }
 
