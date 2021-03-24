@@ -1,8 +1,9 @@
 import { createStore, combineReduers, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
-// reducers here
+import boardReducer from './boardReducers';
 
 const rootReducer = combineReduers({
+  boards: boardReducer,
 
 });
 
