@@ -17,7 +17,7 @@ export const setOneBoard = board => {
   }
 };
 
-// ACTION CREATOR - FETCH
+// FETCHES
 export const fetchAllBoards = () => {
   return async (dispatch) => {
     const responseFromDb = await fetch('/api/boards');
@@ -40,6 +40,7 @@ export const fetchOneBoard = (boardId) => {
 
 // REDUCER
 export default function boardReducer(state = [], action) {
+  let newState;
   switch (action.type) {
     case SET_BOARDS:
       newState = action.boards;
@@ -51,5 +52,3 @@ export default function boardReducer(state = [], action) {
       return state;
   }
 };
-
-export default boardReducer;
