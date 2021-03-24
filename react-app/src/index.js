@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
+import configureStore from './store';
 import MenuNavBarProvider from './context/MenuNavBarContext';
+import './index.css';
+import 'fontsource-roboto';
+import App from './App';
 
-import 'fontsource-roboto'
+const store = configureStore();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <MenuNavBarProvider>
-      <App />
-    </MenuNavBarProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<Provider store={store}>
+			<MenuNavBarProvider>
+				<App />
+			</MenuNavBarProvider>
+		</Provider>
+	</React.StrictMode>,
+	document.getElementById('root')
 );
