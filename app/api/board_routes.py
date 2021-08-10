@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from flask_login import login_required
-from app.models import db, Board
+from app.models import db, Board, Board_Item1, Board_Item4, Board_Item7, Board_Item8, Board_Item9, Board_Item10
 from app.forms.board_form import BoardForm
 
 board_routes = Blueprint('boards', __name__)
@@ -20,6 +20,10 @@ def boards():
 def board(id):
   get_board = Board.query.get(id)
   return get_board.to_dict()
+
+# @board_routes.route('/<int:id>/items')
+# def board_items(id):
+#   get_board_items = .query.filter()
 
 # Create a Board
 @board_routes.route('/new', methods=["POST"])
