@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from app.models import db, Board_Item1, Board_Item4, Board_Item7, Board_Item8, Board_Item9, Board_Item10
+from app.models import db, Board, Board_Item1, Board_Item4, Board_Item7, Board_Item8, Board_Item9, Board_Item10
 
 menu_routes = Blueprint('menus', __name__)
 

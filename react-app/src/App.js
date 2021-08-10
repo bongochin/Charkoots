@@ -12,6 +12,7 @@ import Home from './components/Home';
 
 import Orders from './components/Orders';
 import Menus from './components/Menus';
+import BoardItems from './components/Menus/MenusTab/BoardItems'
 import ItemCard from './components/Card/ItemCard'
 
 import { authenticate } from './services/auth';
@@ -544,10 +545,8 @@ function App() {
 				<Route path="/menus" exact={true}>
 					<Menus />
 				</Route>
-				<Route path="/menus/meats" exact={true}>
-					{meats.map(meat => {
-            return <ItemCard type={meat}/>
-          })}
+				<Route path="/menus/:itemType" exact={true}>
+					<BoardItems type={itemType}/>
 				</Route>
 				<Route path="/menus/cheeses" exact={true}>
 					{cheeses.map(cheese => {
