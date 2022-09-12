@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {model: 'Styles'}
       },
-      region: {
+      origin: {
         type: Sequelize.STRING
       },
       fruitiness: {
