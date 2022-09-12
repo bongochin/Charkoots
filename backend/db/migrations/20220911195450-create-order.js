@@ -16,31 +16,15 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {model: 'Wines'}
       },
-      totalPrice: {
-        type: Sequelize.FLOAT
-      },
-      shippingAddress1: {
-        type: Sequelize.STRING
-      },
-      shippingAddress2: {
-        type: Sequelize.STRING
-      },
-      shippingCity: {
-        type: Sequelize.STRING
-      },
-      shippingState: {
-        type: Sequelize.STRING
-      },
-      shippingZipcode: {
-        type: Sequelize.INTEGER(5)
-      },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       }
     });
   },

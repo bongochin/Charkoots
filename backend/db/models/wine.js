@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Wine.init({
     name: DataTypes.STRING,
     styleId: DataTypes.INTEGER,
-    region: DataTypes.STRING,
+    origin: DataTypes.STRING,
     fruitiness: DataTypes.INTEGER,
     body: DataTypes.INTEGER,
     sweetness: DataTypes.INTEGER,

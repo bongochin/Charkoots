@@ -9,7 +9,7 @@ module.exports = {
 				{
           name: 'Cava',
           styleId: 1,
-          region: 'Spain',
+          origin: 'Spain',
           fruitiness: 3,
           body: 1,
           sweetness: 2,
@@ -19,7 +19,7 @@ module.exports = {
         {
           name: 'Champagne',
           styleId: 1,
-          region: 'Champagne, France',
+          origin: 'Champagne, France',
           fruitiness: 2,
           body: 1,
           sweetness: 1,
@@ -29,7 +29,7 @@ module.exports = {
         {
           name: 'Prosecco',
           styleId: 1,
-          region: 'Northern Italy',
+          origin: 'Northern Italy',
           fruitiness: 4,
           body: 1,
           sweetness: 2,
@@ -40,7 +40,7 @@ module.exports = {
         {
           name: 'Pinot Gris',
           styleId: 2,
-          region: 'France and Italy',
+          origin: 'France and Italy',
           fruitiness: 2,
           body: 2,
           sweetness: 2,
@@ -50,7 +50,7 @@ module.exports = {
         {
           name: 'Sauvignon Blanc',
           styleId: 2,
-          region: 'France',
+          origin: 'France',
           fruitiness: 5,
           body: 1,
           sweetness: 2,
@@ -59,9 +59,9 @@ module.exports = {
         },
         // 3. Full-bodied White
         {
-          name: 'Chardonnary',
+          name: 'Chardonnay',
           styleId: 3,
-          region: 'France',
+          origin: 'France',
           fruitiness: 4,
           body: 4,
           sweetness: 2,
@@ -71,7 +71,7 @@ module.exports = {
         {
           name: 'Viognier',
           styleId: 3,
-          region: 'Southern France',
+          origin: 'Southern France',
           fruitiness: 5,
           body: 3,
           sweetness: 3,
@@ -82,7 +82,7 @@ module.exports = {
         {
           name: 'Muscat Blanc',
           styleId: 4,
-          region: 'Greece and Italy',
+          origin: 'Greece and Italy',
           fruitiness: 5,
           body: 1,
           sweetness: 4,
@@ -92,7 +92,7 @@ module.exports = {
         {
           name: 'Riesling',
           styleId: 4,
-          region: 'Germany',
+          origin: 'Germany',
           fruitiness: 5,
           body: 1,
           sweetness: 3,
@@ -103,7 +103,7 @@ module.exports = {
         {
           name: 'Rosé',
           styleId: 5,
-          region: 'Everywhere',
+          origin: 'Everywhere',
           fruitiness: 5,
           body: 3,
           sweetness: 2,
@@ -114,7 +114,7 @@ module.exports = {
         {
           name: 'Pinot Noir',
           styleId: 6,
-          region: 'France',
+          origin: 'France',
           fruitiness: 4,
           body: 3,
           tannin: 2,
@@ -125,7 +125,7 @@ module.exports = {
         {
           name: 'Carignan',
           styleId: 7,
-          region: 'Spain',
+          origin: 'Spain',
           fruitiness: 5,
           body: 3,
           tannin: 3,
@@ -135,7 +135,7 @@ module.exports = {
         {
           name: 'Merlot',
           styleId: 7,
-          region: 'France',
+          origin: 'France',
           fruitiness: 4,
           body: 4,
           tannin: 4,
@@ -145,7 +145,7 @@ module.exports = {
         {
           name: 'Zinfandel',
           styleId: 7,
-          region: 'Croatia',
+          origin: 'Croatia',
           fruitiness: 5,
           body: 5,
           tannin: 3,
@@ -156,7 +156,7 @@ module.exports = {
         {
           name: 'Bordeaux Blend',
           styleId: 8,
-          region: 'France',
+          origin: 'France',
           fruitiness: 4,
           body: 5,
           tannin: 5,
@@ -166,7 +166,7 @@ module.exports = {
         {
           name: 'Cabernet Sauvignon',
           styleId: 8,
-          region: 'France',
+          origin: 'France',
           fruitiness: 4,
           body: 5,
           tannin: 4,
@@ -176,7 +176,7 @@ module.exports = {
         {
           name: 'Malbec',
           styleId: 8,
-          region: 'South West France',
+          origin: 'South West France',
           fruitiness: 5,
           body: 4,
           tannin: 3,
@@ -186,7 +186,7 @@ module.exports = {
         {
           name: 'Syrah',
           styleId: 8,
-          region: 'France',
+          origin: 'France',
           fruitiness: 5,
           body: 5,
           tannin: 3,
@@ -197,7 +197,7 @@ module.exports = {
         {
           name: 'Port',
           styleId: 9,
-          region: 'Portugal',
+          origin: 'Portugal',
           fruitiness: 5,
           body: 5,
           tannin: 5,
@@ -207,7 +207,7 @@ module.exports = {
         {
           name: 'Sherry',
           styleId: 9,
-          region: 'Spain',
+          origin: 'Spain',
           fruitiness: 2,
           body: 3,
           sweetness: 3,
